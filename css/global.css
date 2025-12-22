@@ -287,8 +287,12 @@ select {
         /* width: 840px; */
     }
     .menuDefault>div nav ul li {
-        color: rgba(35, 24, 21, 0.4);
         position: relative;
+        color: rgba(35, 24, 21, 1);
+        transition: color ease-out .2s;
+    }
+    .menuDefault>div nav ul:has(li.active) li:not(.active) {
+        color: rgba(35, 24, 21, 0.4);
     }
     .menuDefault>div nav ul li.active {
         color: rgba(35, 24, 21, 1);
@@ -940,8 +944,12 @@ select {
         /* width: 840px; */
     }
     .menuDefault>div nav ul li {
-        color: rgba(35, 24, 21, 0.4);
         position: relative;
+        color: rgba(35, 24, 21, 1);
+        transition: color ease-out .2s;
+    }
+    .menuDefault>div nav ul:has(li.active) li:not(.active) {
+        color: rgba(35, 24, 21, 0.4);
     }
     .menuDefault>div nav ul li.active {
         color: rgba(35, 24, 21, 1);
