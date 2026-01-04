@@ -137,14 +137,14 @@ select {
     }
     .menuScreenPanel ol>li:hover h3,
     .menuScreenPanel ol>li.active h3 {
-        color: #2E15B1;
+        color: var(--vs400);
         font-weight: 500;
     }
     .menuScreenPanel ol>li:not(.active) h3 a {
         display: none;
     }
     .circleMore.purple {
-        background-color: rgba(46, 21, 177, 0.1);
+        background-color: rgba(41, 77, 199, 0.1);
     }
     .circleMore.purple::after {
         background-image: url('../images/kcab_icon_more.svg');
@@ -615,108 +615,22 @@ select {
         position: fixed;
         width: 100%;
         z-index: 10;
-        height: 103px;
+        height: 100px;
     }
     header::after {
         content: '';
         display: block;
         width: 100%;
-        height: 103px;
+        height: 100px;
         background-color: #FFF;
         position: fixed;
         left: 0;
         top: 0;
         z-index: -1;
     }
-    /* .menuScreenPanel{display: none;} */
+    .menuScreenPanel{display: none;}
     /* header:not(:has(.btnMenu.active)) .menuScreenPanel{display: none;} */
-    .menuScreenPanel:not(.active) {
-        /* display: none; */
-        transform: translate(100%, 0);
-    }
-    .menuScreenPanel {
-        background-color: #FFF;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100dvh;
-        transition: transform ease-in-out .8s;
-    }
-    .menuScreenPanel::after {
-        content: '';
-        display: block;
-        width: 65vh;
-        height: inherit;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-image: url('../images/kcab_bg_siteMap.png');
-        background-position: left top;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .menuScreenPanel .panelWrap {
-        height: calc(100dvh - 183px);
-        margin-left: 65vh;
-        padding-right: 4%;
-        margin-top: 103px;
-        margin-bottom: 80px;
-        display: flex;
-    }
-    .menuScreenPanel .panelWrap .innerBox {
-        height: 80dvh;
-        overflow-y: auto;
-        width: 100%;
-    }
-    .menuScreenPanel ol {
-        padding-left: 100px;
-        width: 100%;
-        /* max-width: 1020px; */
-        margin: 0 auto;
-        /* height: inherit; */
-        /* overflow-y: auto; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* padding-top: 104px; */
-        box-sizing: border-box;
-    }
-    .menuScreenPanel .panelWrap .innerBox {
-        -ms-overflow-style: none;
-    }
-    .menuScreenPanel .panelWrap .innerBox::-webkit-scrollbar {
-        display: none;
-    }
-    .menuScreenPanel ol>li {
-        display: block;
-    }
-    .menuScreenPanel ol>li {
-        cursor: pointer;
-    }
-    .menuScreenPanel ol>li {
-        padding-bottom: 24px;
-        margin-bottom: 24px;
-    }
-    .menuScreenPanel ol>li:not(:last-of-type) {
-        border-bottom: 1px solid #EBEBEB;
-    }
-    .menuScreenPanel ol>li.active:not(:last-of-type) {
-        border-bottom: 1px solid #2E15B1;
-    }
-    .menuScreenPanel ol>li h3 {
-        color: #626D84;
-        display: flex;
-        transition: color ease-out .4s;
-    }
-    .menuScreenPanel ol>li:hover h3,
-    .menuScreenPanel ol>li.active h3 {
-        color: #2E15B1;
-        font-weight: 500;
-    }
-    .menuScreenPanel ol>li:not(.active) h3 a {
-        display: none;
-    }
+    
     .circleMore.purple {
         background-color: rgba(46, 21, 177, 0.1);
     }
@@ -752,62 +666,7 @@ select {
         transform: translate(-50%, -50%);
         transition: transform ease-out .6s;
     }
-    .menuScreenPanel ol>li.active h3 a::after {
-        transform: translate(-50%, -50%);
-    }
-    .menuScreenPanel ul {
-        -ms-overflow-style: none;
-    }
-    .menuScreenPanel ul::-webkit-scrollbar {
-        display: none;
-    }
-    .menuScreenPanel ul {
-        padding-top: 24px;
-        color: #626D84;
-        /* white-space: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden; */
-        /* height: 48px; */
-        display: flex;
-        gap: 12px 0;
-        flex-wrap: wrap;
-    }
-    .menuScreenPanel ul li {
-        display: inline-block;
-        position: relative;
-        text-align: center;
-    }
-    .menuScreenPanel ul li a {
-        display: block;
-        transition: color ease-out .4s;
-    }
-    .menuScreenPanel ul li:hover a {
-        font-weight: 600;
-        color: #222;
-        text-decoration: underline;
-    }
-    .menuScreenPanel ul li a::after {
-        content: attr(data-text);
-        display: block;
-        font-weight: 600;
-        height: 0px;
-        visibility: hidden;
-    }
-    .menuScreenPanel ul li:not(:last-of-type) {
-        padding-right: 28px;
-        margin-right: 24px;
-    }
-    .menuScreenPanel ul li::after {
-        content: '';
-        display: block;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.1);
-        position: absolute;
-        right: 0;
-        top: 8px;
-    }
+
     .menuDropPanel:not(.active) {
         transform: translate(0, -100%);
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0);
@@ -819,8 +678,8 @@ select {
         background-color: #FFF;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-        transition: transform ease-out .6s;
-        transition-property: transform, box-shadow;
+        /* transition: transform ease-out .6s; */
+        /* transition-property: transform, box-shadow; */
         position: relative;
         z-index: -2;
     }
@@ -883,7 +742,7 @@ select {
     header:has(.menuScreenPanel.active) .menuDefault {
         background-color: transparent;
         justify-content: flex-end;
-        height: 103px;
+        height: 100px;
     }
     header:has(.menuScreenPanel.active) .menuDefault h1 {
         display: none;
@@ -902,7 +761,7 @@ select {
         padding-inline: 4%;
         gap: 16px;
         box-sizing: border-box;
-        height: 103px;
+        height: 100px;
     }
     /* .menuDefault h1{width: 20%; max-width: 117px;} */
     .menuDefault h1 {
@@ -975,7 +834,7 @@ select {
         display: block;
     }
     .btnSearch {
-        width: 240px;
+        width: 300px;
         height: 34px;
         border-radius: 17px;
         padding-block: 6px;
@@ -1093,20 +952,20 @@ select {
         margin-bottom: 24px;
     }
     footer .topBox .leftBox .snsList {
-        margin-bottom: 32px;
+        margin-bottom: 100px;
     }
     footer .topBox .leftBox .snsList li {
         display: inline-block;
-        height: 20px;
+        height: 40px;
     }
     footer .topBox .leftBox .snsList li:nth-of-type(1) {
-        background-image: url('../images/kcab_icon_footer_linkedin.svg');
-        width: 20px;
+        background-image: url('../images/kcab_icon_linkedin.svg');
+        width: 40px;
     }
     footer .topBox .leftBox .snsList li:nth-of-type(2) {
-        background-image: url('../images/kcab_icon_footer_youtube.svg');
-        width: 25px;
-        margin-left: 16px;
+        background-image: url('../images/kcab_icon_youtube.svg');
+        width: 40px;
+        margin-left: 10px;
     }
     footer .topBox .leftBox .snsList li a {
         display: block;
@@ -1117,11 +976,11 @@ select {
         position: relative;
     }
     footer .topBox .leftBox .customSelect button {
-        background-color: rgba(217, 217, 217, 0.1);
+        background-color: #1B2D63;
         width: 100%;
         height: 46px;
         border-radius: 23px;
-        color: rgba(255, 255, 255, 0.5);
+        color: #FFF;
         text-align: left;
         padding-inline: 26px;
         position: relative;
@@ -1146,8 +1005,8 @@ select {
         display: none;
     }
     footer .topBox .leftBox .customSelect .linkList {
-        background-color: #272B33;
-        color: rgba(255, 255, 255, 0.5);
+        background-color: #1B2D63;
+        color: #FFF;
         padding: 24px;
         position: absolute;
         left: 0;
@@ -1164,7 +1023,7 @@ select {
         margin-bottom: 24px;
     }
     footer .topBox .rightBox h3 {
-        color: #FFF;
+        color: rgba(255, 255, 255, 0.5);
         margin-bottom: 20px;
     }
     footer .topBox .rightBox ul {
@@ -1186,8 +1045,12 @@ select {
         background-color: rgba(255, 255, 255, 0.1);
     }
     footer .topBox .rightBox ul>li h4 {
-        color: #7D6CFF;
+        color: #519AE8;
         margin-bottom: 24px;
+
+        background-image: url('../images/kcab_icon_more_tr_gray.svg');
+        background-position: right top;
+        background-repeat: no-repeat;
     }
     footer .topBox .rightBox ul>li h4 span {
         color: rgba(255, 255, 255, 0.4);
@@ -1214,6 +1077,14 @@ select {
     footer .topBox .rightBox ul>li ol li a.infoEmail::before {
         content: 'E ';
     }
+    footer .topBox .rightBox ul>li.mailBox{
+        background-color: var(--vs400);
+        line-height: 20px;
+        color: #FFF;
+    }
+    footer .topBox .rightBox ul>li.mailBox img{
+        margin-top: 20px;
+    }
     footer .bottomBox {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-block: 24px;
@@ -1225,10 +1096,25 @@ select {
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        color: rgba(255, 255, 255, 0.4);
+        color: rgba(255, 255, 255, 0.6);
+    }
+    footer .bottomBox .innerBox ul{
+        display: flex;
     }
     footer .bottomBox .innerBox ul li {
-        display: inline-block;
+        display: block;
+        position: relative;
+        padding-left: 16px;
+    }
+    footer .bottomBox .innerBox ul li::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.6);
+
+        left: 0; top: 5px;
     }
     footer .bottomBox .innerBox ul li:not(:last-of-type) {
         margin-right: 24px;

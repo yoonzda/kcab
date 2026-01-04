@@ -34,4 +34,64 @@ var swiper = new Swiper(".mainSlideContainer", {
         translate: ["100%", 0, 0],
         },
     },
+    // on: {
+    //     slideChangeTransitionStart: function () {
+    //     const activeSlide = this.slides[this.activeIndex];
+    //     const wave = activeSlide.querySelector(".wave");
+    //     if (wave) animateWaveText(wave);
+    //     },
+    // },
+    on: {
+        slideChangeTransitionStart: function () {
+        const activeSlide = this.slides[this.activeIndex];
+        const waves = activeSlide.querySelectorAll(".wave");
+
+        waves.forEach(wave => animateWaveText(wave));
+        },
+    },
 });
+
+// const wave = document.querySelector(".wave");
+
+// wave.innerHTML = wave.textContent
+//   .split("")
+//   .map((letter, idx) => {
+//     if (letter === " ") return " ";
+//     return `<h2 style="animation-delay:${
+//       idx * 15
+//     }ms" class="letter">${letter}</h2>`;
+//   })
+//   .join("");
+
+function animateWaveText(waveEl) {
+  const text = waveEl.getAttribute("data-text");
+
+  waveEl.innerHTML = text
+    .split("")
+    .map((letter, idx) => {
+      if (letter === " ") return " ";
+      return `<p class="letter fonwR68" style="animation-delay:${idx * 15}ms">${letter}</p>`;
+    })
+    .join("");
+}
+
+// function animateWaveText(waveEl) {
+//   const text = waveEl.dataset.text;
+//   waveEl.innerHTML = "";
+
+//   const words = text.split(" ");
+
+//   words.forEach((word, idx) => {
+//     const span = document.createElement("span");
+//     span.className = "word";
+//     span.style.animationDelay = `${idx * 120}ms`;
+//     span.textContent = word;
+
+//     waveEl.appendChild(span);
+
+//     // 단어 사이 공백
+//     if (idx < words.length - 1) {
+//       waveEl.appendChild(document.createTextNode(" "));
+//     }
+//   });
+// }

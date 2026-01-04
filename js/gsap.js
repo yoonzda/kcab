@@ -3,12 +3,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 let tl_search = gsap.timeline({
 	scrollTrigger: {
-		trigger: '.searchContainer',
+		trigger: '.newsContainer',
 		start: 'top 80%',
 		end: 'bottom 20%',
 	}
 });
-tl_search.fromTo(".searchContainer", {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1});
+tl_search.fromTo(".newsContainer", {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1});
+
+let tl_event = gsap.timeline({
+	scrollTrigger: {
+		trigger: '.eventContainer',
+		start: 'top 80%',
+		end: 'bottom 20%',
+	}
+});
+tl_event.fromTo(".eventContainer", {y: 100, opacity: 0}, {y: 0, opacity: 1, duration: 1});
 
 let tl = gsap.timeline({
 	scrollTrigger: {
