@@ -1,3 +1,6 @@
+.mainSlideControl .swiper-button-prev::after{display: none;}
+.mainSlideControl .swiper-button-next::after{display: none;}
+
 @media screen and (max-width: 1279px) {
     .contentWrap {
         padding-top: 74px;
@@ -12,31 +15,45 @@
     .mainSlideContainer .swiper-slide {
         background-color: #FFF;
         /* max-height: 1120px; */
+        height: 570px;
     }
     .mainSlideContainer .swiper-slide .textBox {
-        /* max-width: 800px; */
-        /* margin: 0 auto; */
+        max-width: 270px;
+        margin: 0 auto;
         /* padding-inline: 12%; */
-        padding-inline: 4%;
-        padding-top: 40px;
+        padding-inline: 8%;
+        padding-top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     .mainSlideContainer .swiper-slide .textBox h2 {
         margin-bottom: 24px;
+        line-height: 130%;
     }
-    .mainSlideContainer .swiper-slide .textBox>p {
-        /* width: 840px; */
-        line-height: 140%;
+    .mainSlideContainer .swiper-slide .textBox>a{
+        width: 120px;
+        height: 40px;
+        display: block;
+
+        line-height: 40px;
+        text-align: center;
     }
     .mainSlideContainer .swiper-slide .imageBox {
-        position: relative;
+        position: absolute;
         width: 100%;
-        height: 300px;
+        height: 570px;
         overflow: hidden;
-        margin-top: -100px;
+        /* margin-top: -100px; */
+
+        top: 0;
+        z-index: -1;
     }
     .mainSlideContainer .swiper-slide img {
         width: 100%;
-        height: 300px;
+        height: 570px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -48,9 +65,11 @@
         width: 100px;
         height: 20px;
         position: absolute;
-        left: 4%;
-        bottom: 100px;
-        color: #222;
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-50%, 0);
+        color: #FFF;
+        z-index: 1;
     }
     .mainSlideControl .swiper-pagination {
         top: 0;
@@ -65,7 +84,7 @@
         width: auto;
         height: 20px;
         z-index: 100;
-        color: #222;
+        color: #FFF;
         top: auto;
         bottom: 0;
     }
@@ -73,7 +92,7 @@
         width: auto;
         height: 20px;
         z-index: 100;
-        color: #222;
+        color: #FFF;
         top: auto;
         bottom: 0;
     }
@@ -84,171 +103,69 @@
         display: none;
     }
     /* ? 01. main slide */
-    /* ? 02 search */
-    .searchContainer {
-        padding-block: 80px;
-    }
-    .searchContainer h2 {
-        text-align: center;
-        margin-bottom: 8px;
-        color: #222;
-        line-height: 140%;
-    }
-    .searchContainer p {
-        text-align: center;
-        /* margin-bottom: 24px; */
-        color: #626D84;
+    
+    /* ? 02. news */
+    .newsContainer{
         padding-inline: 4%;
-        box-sizing: border-box;
-        width: 80%;
-        margin: 0 auto 24px;
-        line-height: 140%;
-    }
-    .searchContainer .searchBox {
-        margin-bottom: 20px;
-    }
-    .searchContainer .searchBox .innerBox {
-        display: flex;
-        gap: 8px;
-        /* width: 840px; */
+        /* max-width: 1440px; */
         /* margin: 0 auto; */
-        flex-wrap: wrap;
-        padding-inline: 4%;
+        
+        padding-top: 50px;
     }
-    .searchContainer .searchBox .innerBox select {
-        border: 2px solid #2E57FD;
-        border-radius: 4px;
-        height: 48px;
-        padding-left: 20px;
-        color: #222;
-        position: relative;
-        background-image: url('../images/kcab_select_arrow.svg');
-        background-position: calc(100% - 12px) center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        background-color: #FFF;
+    .newsContainer .title2{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #C0C0C0;
+
+        margin-bottom: 40px;
     }
-    .searchContainer .searchBox .innerBox select:nth-of-type(1) {
-        width: 55%;
-    }
-    .searchContainer .searchBox .innerBox select:nth-of-type(2) {
-        flex: 1;
-    }
-    .searchContainer .searchBox .innerBox div {
-        /* flex: 1; */
-        width: 100%;
-        position: relative;
-        height: 48px;
-        background: linear-gradient(90deg, #542DFD, #6C14FA);
-        padding: 2px;
-        border-radius: 4px;
-        /* box-sizing: border-box; */
-    }
-    .searchContainer .searchBox .innerBox div input[type="search"] {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 2px;
-        padding-left: 48px;
-        padding-right: 144px;
-        background-image: url('../images/kcab_icon_search_gray.svg');
-        background-repeat: no-repeat;
-        background-position: 18px center;
-        background-color: #FFF;
-    }
-    .searchContainer .searchBox .innerBox div input[type="search"]::placeholder {
-        color: #626D84;
-    }
-    .searchContainer .searchBox .innerBox div input[type="submit"] {
-        position: absolute;
-        right: 2px;
-        top: 2px;
-        width: 125px;
-        height: 48px;
-        color: #F6F4EE;
-        border: none;
-        border-radius: 4px 2px 2px 4px;
-        background: linear-gradient(90deg, #3400BB, #2E0099);
-        cursor: pointer;
-    }
-    .searchContainer .searchKeyword {
-        border-top: 1px dashed #C4CED8;
-        /* width: 840px; */
-        /* margin: 0 auto; */
-        padding-top: 20px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px 4px;
-    }
-    .searchContainer .searchKeyword button {
-        padding: 0 20px;
-        line-height: 44px;
-        border-radius: 22px;
-    }
-    .searchContainer .searchKeyword button::before {
-        content: '# ';
-    }
-    /* ? 03 news */
-    .newsContainer {
-        /* padding-inline: 12%; */
-        padding-inline: 4%;
-        /* max-width: 800px; */
-        /* margin: 0 auto 120px; */
-        margin-bottom: 120px;
-    }
-    .newsContainer .titleBox {
+    .title2{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
-    }
-    .newsContainer h2 {
+        /* margin-bottom: 40px; */
         color: #222;
     }
-    .newsContainer a {
+    .title2 a{
         display: block;
-        padding-right: 12px;
+        padding-right: 18px;
         background-image: url('../images/kcab_icon_more_right.svg');
         background-position: right center;
         background-repeat: no-repeat;
+        
         background-size: 6px;
     }
-    .newsContainer .newsList {
-        display: grid;
-        /* grid-template-columns: repeat(1, 1fr); */
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        grid-gap: 60px;
+    
+    .newsContainer ul{display: flex; gap: 20px; flex-wrap: wrap; flex-direction: column;}
+    .newsContainer ul li{display: block; border-bottom: 1px solid #C0C0C0; box-sizing: border-box;}
+    .newsContainer ul li h4{color: #222; line-height: 140%; margin-bottom: 26px;}
+    .newsContainer ul li span{color: #626D84; padding-bottom: 20px; display: block;}
+
+    /* ? 03. event */
+    .eventContainer{
+        padding-inline: 4%;
+        /* max-width: 1440px; */
+        /* margin: 0 auto 180px; */
+
+        padding-top: 50px;
+        margin-bottom: 70px;
     }
-    .newsContainer .newsList li {
-        display: block;
-        cursor: pointer;
-    }
-    .newsContainer .newsList li img {
-        width: 100%;
-        margin-bottom: 32px;
-    }
-    .newsContainer .newsList li span {
-        color: #222;
-        display: block;
-        margin-bottom: 8px;
-    }
-    .newsContainer .newsList li h3 {
-        color: #222;
-        line-height: 140%;
-        margin-bottom: 8px;
-    }
-    .newsContainer .newsList li small {
-        color: #222;
-        display: block;
+    .eventContainer .title2{
         margin-bottom: 20px;
     }
-    .newsContainer .newsList li b {
-        display: inline-block;
-        line-height: 36px;
-        padding-inline: 20px;
-        border-radius: 18px;
+    .eventContainer ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        flex-direction: column;
     }
+    .eventContainer ul li{display: flex; flex-direction: column; align-items: flex-start;}
+    .eventContainer ul li img{width: 100%; margin-bottom: 20px;}
+    .eventContainer ul li h4{font-size: 24px; color: #222; margin-bottom: 20px; line-height: 120%;}
+    .eventContainer ul li small{color: #222; margin-bottom: 8px; line-height: 140%; display: block;}
+    .eventContainer ul li span{color: #222; margin-bottom: 24px; line-height: 140%; display: block;}
+    .eventContainer ul li a{width: 190px; height: 50px; line-height: 50px; text-align: center;}
+
     /* ? 04 quick menu */
     .quickMenuContainer {
         background-color: #F1F1F1;
@@ -257,11 +174,11 @@
     .quickMenuContainer>div {
         /* padding-inline: 12%; */
         padding-inline: 4%;
-        max-width: 1440px;
-        margin: 0 auto;
+        /* max-width: 1440px; */
+        /* margin: 0 auto; */
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 28px;
     }
     .quickMenuContainer .leftBox {
         background-image: url('../images/kcab_bg_quickMenu_simple.png');
@@ -269,9 +186,9 @@
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: 360px;
+        height: 410px;
         box-sizing: border-box;
-        padding: 24px;
+        padding: 16px 20px;
         display: flex;
         align-items: flex-end;
     }
@@ -291,12 +208,12 @@
         margin-bottom: 4px;
     }
     .quickMenuContainer .titleWrap {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .titleWrap mark {
         background-color: transparent;
         font-style: normal;
-        color: #6918FA;
+        color: #294DC7;
         display: block;
         padding-left: 64px;
         position: relative;
@@ -307,13 +224,14 @@
         display: block;
         width: 52px;
         height: 1px;
-        background-color: #6918FA;
+        background-color: #294DC7;
         position: absolute;
         left: 0;
         top: 6px;
     }
     .titleWrap h2 {
         margin-bottom: 16px;
+        line-height: 140%;
     }
     .titleWrap h2 p:first-of-type {
         color: #222;
@@ -329,7 +247,7 @@
     .quickMenuContainer .quickMenuList li {
         display: flex;
         gap: 16px;
-        align-items: center;
+        /* align-items: center; */
         background-color: #FFF;
         padding: 34px 20px;
         border-radius: 16px;
@@ -349,22 +267,22 @@
         transition: background ease-out .2s;
     }
     .quickMenuContainer .quickMenuList li:hover span {
-        background-color: #222;
+        background-color: #294DC7;
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(1) span {
-        background-image: url('../images/kcab_icon_quick_01_black.svg');
+        background-image: url('../images/kcab_icon_quick_02_black.svg');
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(2) span {
-        background-image: url('../images/kcab_icon_quick_02_black.svg');
+        background-image: url('../images/kcab_icon_quick_01_black.svg');
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(3) span {
         background-image: url('../images/kcab_icon_quick_03_black.svg');
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(1):hover span {
-        background-image: url('../images/kcab_icon_quick_01_white.svg');
+        background-image: url('../images/kcab_icon_quick_02_white.svg');
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(2):hover span {
-        background-image: url('../images/kcab_icon_quick_02_white.svg');
+        background-image: url('../images/kcab_icon_quick_01_white.svg');
     }
     .quickMenuContainer .quickMenuList li:nth-of-type(3):hover span {
         background-image: url('../images/kcab_icon_quick_03_white.svg');
@@ -380,77 +298,272 @@
         color: #676F7E;
         line-height: 140%;
     }
-    /* ? 05 contact */
-    .contactContainer {
-        padding-block: 80px 160px;
-        /* padding-inline: 12%; */
+    
+    /* ? 05 mediation */
+    .mediationContainer{
+        padding-block: 120px;
         padding-inline: 4%;
         /* max-width: 1440px; */
         /* margin: 0 auto; */
-        background-image: url('../images/kcab_bg_contact.png');
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: contain;
-        margin-bottom: 40px;
+
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+
+        gap: 60px;
+
+        flex-direction: column;
     }
-    .contactContainer>div {
-        /* background-image: url('../images/kcab_bg_contact.png');
-        background-repeat: no-repeat;
-        background-position: right center; */
-        margin-bottom: 50px;
-    }
-    .contactContainer .contactList {
+    .mediationContainer div{
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        text-align: center;
+
+        padding-inline: 2% 6%;
     }
-    .contactContainer .contactList li {
-        display: block;
-        flex: 1;
-        border: 1px solid rgba(226, 228, 233, 0.5);
-        border-radius: 16px;
-        padding: 24px;
+    .mediationContainer div p::before{
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 1px;
+        background-color: #000;
+        
+        top: 0;
+        left: calc(50% - 22px);
     }
-    .contactContainer .contactList li span {
+    .mediationContainer div p{
+        margin-bottom: 20px;
+        line-height: 160%;
+
+        position: relative;
+        padding-top: 32px;
+    }
+    .mediationContainer div p b{
         display: block;
-        width: 40px;
-        height: 40px;
-        background-color: #F5F4F0;
-        border-radius: 12px;
+        font-size: 38px;
+    }
+    .mediationContainer div span{
+        display: block;
+        line-height: 48px;
+        margin-bottom: 40px;
+
+        font-size: 20px;
+    }
+    .mediationContainer div a{
+        width: 130px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .mediationContainer img{width: 90%; margin: 0 auto;}
+
+    /* ? sub 01 - 01 kcabInternational */
+    .subContainer{padding-top: 74px;}
+
+    .subTopVisual{
+        background-color: #018EB8;
+        
+        height: 180px;
+        margin-inline: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+
+        /* margin-block: 20px 130px; */
+
+        position: relative;
+    }
+    .subTopVisual::after{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 180px;
+        max-width: 990px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-image: url('../images/kcab_bg_kcabInterational_half.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .subTopVisual div{
+        position: relative;
+        z-index: 1;
+        padding-inline: calc(8% - 36px);
+        color: #FFF;
+    }
+    .subTopVisual div ul{
+        display: flex;
+        list-style: none;
+        gap: 10px;
+
         margin-bottom: 24px;
+    }
+    .subTopVisual div ul li:first-of-type{width: 14px; height: 14px; background-image: url('../images/kcab_icon_home.svg'); background-repeat: no-repeat; background-position: center;}
+    .subTopVisual div ul li:first-of-type a{display: block; text-indent: -9999px;}
+    .subTopVisual div ul li:not(:first-of-type){padding-left: 13px; position: relative;}
+    .subTopVisual div ul li:not(:first-of-type)::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); position: absolute; left: 0; top: 6px;}
+    .subTopVisual div h2{font-size: 30px;}
+
+    .subContent{
+        padding-inline: 4%;
+
+        /* display: flex; */
+        /* align-items: flex-start; */
+        /* gap: 4%; */
+
+        position: relative;
+
+        padding-top: 100px;
+        padding-bottom: 130px;
+    }
+    /* .subContent aside{
+        width: 260px;
+        
+        position: sticky;
+        top: 120px;
+    } */
+    .subContent>div{
+        flex: 1;
+
+        /* display: flex; */
+        /* gap: 4%; */
+        align-items: flex-start;
+    }
+    .subContent>div div:has(img){
+        /* max-width: 460px; */
+        /* width: 30vw; */
+        /* height: 51vw; */
+        /* max-height: 780px; */
+
+        /* position: relative; */
+        width: 100%;
+        /* top: 120px; */
+        margin-bottom: 32px;
+    }
+    .subContent>div div img{
+        width: 100%;
+    }
+    .subContent>div div:has(p){
+        flex: 1;
+    }
+    .subContent .conText li{line-height: 140%; list-style: none;}
+    .subContent .conText li.accCon{margin-bottom: 32px; color: #222;}
+    .subContent .conText li:not(.accCon){margin-bottom: 20px; color: #434343;}
+
+    .subContent>ol{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EBEBEB; 
+
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+        
+        transform: translate(0, -100px);
+
+        box-sizing: border-box;
+        list-style: none;
+    }
+    .subContent>ol>li{
+        padding-block: 24px;
+
+    }
+    .subContent>ol>li:first-of-type{
+        width: 60px;
+        /* height: 60px; */
+        box-sizing: border-box;
+
+        text-indent: -9999px;
+        background-image: url('../images/kcab_icon_home_gray.svg');
         background-repeat: no-repeat;
         background-position: center;
     }
-    .contactContainer .contactList li:nth-of-type(1) span {
-        background-image: url('../images/kcab_icon_contact_01.svg');
+    .subContent>ol>li:first-of-type a{
+        display: block;
     }
-    .contactContainer .contactList li:nth-of-type(2) span {
-        background-image: url('../images/kcab_icon_contact_02.svg');
+    .subContent>ol>li:not(:first-of-type){
+        border-left: 1px solid #EBEBEB;
+        padding-inline: 16px;
+
+        flex: 1;
+
+        position: relative;
     }
-    .contactContainer .contactList li:nth-of-type(3) span {
-        background-image: url('../images/kcab_icon_contact_03.svg');
+    .subContent>ol>li button{
+        display: block;
+        width: 100%;
+        height: inherit;
+        text-align: left;
+
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 130%;
+        color: #666;
+
+        position: relative;
     }
-    .contactContainer .contactList li h3 {
-        color: #222;
-        line-height: 140%;
-        margin-bottom: 4px;
-    }
-    .contactContainer .contactList li p {
-        color: #676F7E;
-        line-height: 140%;
-        margin-bottom: 24px;
-        word-break: keep-all;
-    }
-    .contactContainer .contactList li a {
-        color: #676F7E;
-        line-height: 140%;
-        display: inline-block;
-        height: 20px;
-        padding-right: 24px;
-        background-image: url('../images/kcab_icon_more_gray.svg');
-        background-repeat: no-repeat;
+    .subContent>ol>li button::after{
+        content: '';
+        width: 10px;
+        height: 10px;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-image: url('../images/kcab_icon_down.svg');
         background-position: right center;
+        background-repeat: no-repeat;
+
+        transition: transform ease-out .4s;
     }
+    .subContent>ol>li:has(.active) button::after{
+        transform: rotate(-180deg);
+    }
+    .subContent>ol li ul:not(.active){
+        display: none;
+    }
+    .subContent>ol li ul{
+        position: absolute;
+        background-color: #F5F5F5;
+
+        width: 100%;
+        left: 0;
+        transform: translate(0, 24px);
+
+        list-style: none;
+        text-align: center;
+
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 130%;
+        color: #434343;
+    }
+    .subContent>ol li ul li{
+        padding: 12px 20px;
+    }
+    .subContent>ol li ul li:not(:last-of-type){
+        border-bottom: 1px solid #DDD;
+    }
+    /* .subContent aside h3{color: #222; margin-bottom: 24px;}
+    .subContent aside ol{border-top: 1px solid #EBEBEB;}
+    .subContent aside ol li{border-bottom: 1px solid #EBEBEB; display: block; padding: 24px 16px; font-size: 15px; font-weight: 400; line-height: 140%; position: relative;}
+    .subContent aside ol li.active,
+    .subContent aside ol li:hover{border-bottom: 1px solid var(--primary); font-weight: 600; color: var(--primary);}
+    .subContent aside ol li::before{content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: var(--primary); top: 50%; transform: translate(0, -50%); clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
+    .subContent aside ol li::after{content: ''; position: absolute; width: 16px; height: 16px; right: 16px; top: 50%; transform: translate(0, -50%); background-image: url('../images/kcab_icon_more_blue.svg'); background-repeat: no-repeat; background-position: -16px center; transition: background ease-out .2s;}
+    .subContent aside ol li a{text-decoration: none; color: inherit; padding-right: 20px; display: inline-block; box-sizing: border-box; transition: padding ease-out .2s;}
+    .subContent aside ol li.active a,
+    .subContent aside ol li:hover a{padding-left: 12px;}
+    .subContent aside ol li.active::before,
+    .subContent aside ol li:hover::before{clip-path: circle(50% at 50% 50%);}
+    .subContent aside ol li.active::after,
+    .subContent aside ol li:hover::after{background-position: center;} */
 }
 
 .wave {
@@ -554,8 +667,6 @@
         z-index: 100;
         color: #FFF;
     }
-    .mainSlideControl .swiper-button-prev::after{display: none;}
-    .mainSlideControl .swiper-button-next::after{display: none;}
     .swiper-button-prev svg {
         display: none;
     }
@@ -616,7 +727,7 @@
     }
     .eventContainer ul li{width: 46%; display: flex; flex-direction: column; align-items: flex-start;}
     .eventContainer ul li img{width: 100%; margin-bottom: 32px;}
-    .eventContainer ul li h4{color: #222; margin-bottom: 28px; line-height: 120%;}
+    .eventContainer ul li h4{font-size: 30px; color: #222; margin-bottom: 28px; line-height: 120%;}
     .eventContainer ul li small{color: #222; margin-bottom: 8px; line-height: 140%; display: block;}
     .eventContainer ul li span{color: #222; margin-bottom: 24px; line-height: 140%; display: block;}
     .eventContainer ul li a{width: 190px; height: 50px; line-height: 50px; text-align: center;}
@@ -945,11 +1056,14 @@
     }
     .mediationContainer div p b{
         display: block;
+        font-size: 54px;
     }
     .mediationContainer div span{
         display: block;
         line-height: 48px;
         margin-bottom: 40px;
+
+        font-size: 28px;
     }
     .mediationContainer div a{
         width: 130px;
@@ -1020,118 +1134,118 @@
         background-repeat: no-repeat;
         background-position: right center;
     } */
+     
+    /* ? sub 01 - 01 kcabInternational */
+    .subContainer{padding-top: 100px;}
+
+    .subTopVisual{
+        background-color: #018EB8;
+        
+        height: 640px;
+        margin-inline: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-block: 20px 130px;
+
+        position: relative;
+    }
+    .subTopVisual::after{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 640px;
+        max-width: 990px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        background-image: url('../images/kcab_bg_kcabInterational_half.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+    .subTopVisual div{
+        position: relative;
+        z-index: 1;
+        padding-inline: calc(8% - 36px);
+        color: #FFF;
+    }
+    .subTopVisual div ul{
+        display: flex;
+        list-style: none;
+        gap: 10px;
+
+        margin-bottom: 24px;
+    }
+    .subTopVisual div ul li:first-of-type{width: 14px; height: 14px; background-image: url('../images/kcab_icon_home.svg'); background-repeat: no-repeat; background-position: center;}
+    .subTopVisual div ul li:first-of-type a{display: block; text-indent: -9999px;}
+    .subTopVisual div ul li:not(:first-of-type){padding-left: 13px; position: relative;}
+    .subTopVisual div ul li:not(:first-of-type)::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); position: absolute; left: 0; top: 6px;}
+    .subTopVisual div h2{font-size: 60px;}
+
+    .subContent{
+        padding-inline: 8%;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 4%;
+
+        position: relative;
+
+        padding-bottom: 140px;
+    }
+    .subContent aside{
+        width: 260px;
+        
+        position: sticky;
+        top: 120px;
+    }
+    .subContent>div{
+        flex: 1;
+
+        display: flex;
+        gap: 4%;
+        align-items: flex-start;
+    }
+    .subContent>div div:has(img){
+        max-width: 460px;
+        width: 30vw;
+        height: 51vw;
+        max-height: 780px;
+
+        position: sticky;
+        top: 120px;
+    }
+    .subContent>div div img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .subContent>div div:has(p){
+        flex: 1;
+    }
+    .subContent .conText li{line-height: 140%; list-style: none;}
+    .subContent .conText li.accCon{margin-bottom: 32px; color: #222;}
+    .subContent .conText li:not(.accCon){margin-bottom: 20px; color: #434343;}
+
+    .subContent aside h3{color: #222; margin-bottom: 24px;}
+    .subContent aside ol{border-top: 1px solid #EBEBEB;}
+    .subContent aside ol li{border-bottom: 1px solid #EBEBEB; display: block; padding: 24px 16px; font-size: 15px; font-weight: 400; line-height: 140%; position: relative;}
+    .subContent aside ol li.active,
+    .subContent aside ol li:hover{border-bottom: 1px solid var(--primary); font-weight: 600; color: var(--primary);}
+    .subContent aside ol li::before{content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: var(--primary); top: 50%; transform: translate(0, -50%); clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
+    .subContent aside ol li::after{content: ''; position: absolute; width: 16px; height: 16px; right: 16px; top: 50%; transform: translate(0, -50%); background-image: url('../images/kcab_icon_more_blue.svg'); background-repeat: no-repeat; background-position: -16px center; transition: background ease-out .2s;}
+    .subContent aside ol li a{text-decoration: none; color: inherit; padding-right: 20px; display: inline-block; box-sizing: border-box; transition: padding ease-out .2s;}
+    .subContent aside ol li.active a,
+    .subContent aside ol li:hover a{padding-left: 12px;}
+    .subContent aside ol li.active::before,
+    .subContent aside ol li:hover::before{clip-path: circle(50% at 50% 50%);}
+    .subContent aside ol li.active::after,
+    .subContent aside ol li:hover::after{background-position: center;}
 }
-
-/* ? sub 01 - 01 kcabInternational */
-
-.subContainer{padding-top: 100px;}
-
-.subTopVisual{
-    background-color: #018EB8;
-    
-    height: 640px;
-    margin-inline: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    margin-block: 20px 130px;
-
-    position: relative;
-}
-.subTopVisual::after{
-    content: '';
-    display: block;
-    width: 50%;
-    height: 640px;
-    max-width: 990px;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background-image: url('../images/kcab_bg_kcabInterational_half.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-}
-.subTopVisual div{
-    position: relative;
-    z-index: 1;
-    padding-inline: calc(8% - 36px);
-    color: #FFF;
-}
-.subTopVisual div ul{
-    display: flex;
-    list-style: none;
-    gap: 10px;
-
-    margin-bottom: 24px;
-}
-.subTopVisual div ul li:first-of-type{width: 14px; height: 14px; background-image: url('../images/kcab_icon_home.svg'); background-repeat: no-repeat; background-position: center;}
-.subTopVisual div ul li:first-of-type a{display: block; text-indent: -9999px;}
-.subTopVisual div ul li:not(:first-of-type){padding-left: 13px; position: relative;}
-.subTopVisual div ul li:not(:first-of-type)::before{content: ''; display: block; width: 3px; height: 3px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); position: absolute; left: 0; top: 6px;}
-
-.subContent{
-    padding-inline: 8%;
-
-    display: flex;
-    align-items: flex-start;
-    gap: 4%;
-
-    position: relative;
-
-    padding-bottom: 140px;
-}
-.subContent aside{
-    width: 260px;
-    
-    position: sticky;
-    top: 120px;
-}
-.subContent>div{
-    flex: 1;
-
-    display: flex;
-    gap: 4%;
-    align-items: flex-start;
-}
-.subContent>div div:has(img){
-    max-width: 460px;
-    width: 30vw;
-    height: 51vw;
-    max-height: 780px;
-
-    position: sticky;
-    top: 120px;
-}
-.subContent>div div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.subContent>div div:has(p){
-    flex: 1;
-}
-.subContent .conText li{line-height: 140%; list-style: none;}
-.subContent .conText li.accCon{margin-bottom: 32px; color: #222;}
-.subContent .conText li:not(.accCon){margin-bottom: 20px; color: #434343;}
-
-.subContent aside h3{color: #222; margin-bottom: 24px;}
-.subContent aside ol{border-top: 1px solid #EBEBEB;}
-.subContent aside ol li{border-bottom: 1px solid #EBEBEB; display: block; padding: 24px 16px; font-size: 15px; font-weight: 400; line-height: 140%; position: relative;}
-.subContent aside ol li.active,
-.subContent aside ol li:hover{border-bottom: 1px solid var(--primary); font-weight: 600; color: var(--primary);}
-.subContent aside ol li::before{content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: var(--primary); top: 50%; transform: translate(0, -50%); clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
-.subContent aside ol li::after{content: ''; position: absolute; width: 16px; height: 16px; right: 16px; top: 50%; transform: translate(0, -50%); background-image: url('../images/kcab_icon_more_blue.svg'); background-repeat: no-repeat; background-position: -16px center; transition: background ease-out .2s;}
-.subContent aside ol li a{text-decoration: none; color: inherit; padding-right: 20px; display: inline-block; box-sizing: border-box; transition: padding ease-out .2s;}
-.subContent aside ol li.active a,
-.subContent aside ol li:hover a{padding-left: 12px;}
-.subContent aside ol li.active::before,
-.subContent aside ol li:hover::before{clip-path: circle(50% at 50% 50%);}
-.subContent aside ol li.active::after,
-.subContent aside ol li:hover::after{background-position: center;}

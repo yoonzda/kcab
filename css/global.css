@@ -51,8 +51,8 @@ select {
     /* .menuScreenPanel{display: none;} */
     /* header:not(:has(.btnMenu.active)) .menuScreenPanel{display: none;} */
     .menuScreenPanel:not(.active) {
-        /* display: none; */
-        transform: translate(0, -100%);
+        display: none;
+        /* transform: translate(0, -100%); */
     }
     .menuScreenPanel {
         background-color: #FFF;
@@ -428,6 +428,8 @@ select {
     }
     footer {
         background-color: #131720;
+
+        position: relative;
     }
     footer .topBox {
         padding-block: 40px;
@@ -459,20 +461,28 @@ select {
     footer .topBox .leftBox .snsList {
         /* margin-bottom: 32px; */
         /* width: 50%; */
-        flex: 1;
+        /* flex: 1; */
+
+        position: absolute;
+        right: 4%;
+        /* top: -32px; */
+        transform: translate(0, calc(-100% - 32px));
     }
     footer .topBox .leftBox .snsList li {
         display: inline-block;
-        height: 20px;
+        height: 32px;
+        width: 32px;
+        background-position: center;
+        background-size: 32px;
     }
     footer .topBox .leftBox .snsList li:nth-of-type(1) {
-        background-image: url('../images/kcab_icon_footer_linkedin.svg');
-        width: 20px;
+        background-image: url('../images/kcab_icon_linkedin.svg');
+        /* width: 20px; */
     }
     footer .topBox .leftBox .snsList li:nth-of-type(2) {
-        background-image: url('../images/kcab_icon_footer_youtube.svg');
-        width: 25px;
-        margin-left: 16px;
+        background-image: url('../images/kcab_icon_youtube.svg');
+        /* width: 25px; */
+        margin-left: 10px;
     }
     footer .topBox .leftBox .snsList li a {
         display: block;
@@ -480,15 +490,16 @@ select {
     }
     footer .topBox .leftBox .customSelect {
         /* display: inline-block; */
-        width: 180px;
+        /* width: 180px; */
+        width: 100%;
         position: relative;
     }
     footer .topBox .leftBox .customSelect button {
-        background-color: rgba(217, 217, 217, 0.1);
+        background-color: #1B2D63;
         width: 100%;
         height: 46px;
         border-radius: 23px;
-        color: rgba(255, 255, 255, 0.5);
+        color: #FFF;
         text-align: left;
         padding-inline: 26px;
         position: relative;
@@ -513,8 +524,8 @@ select {
         display: none;
     }
     footer .topBox .leftBox .customSelect .linkList {
-        background-color: #272B33;
-        color: rgba(255, 255, 255, 0.5);
+        background-color: #1B2D63;
+        color: #FFF;
         padding: 24px;
         position: absolute;
         left: 0;
@@ -530,10 +541,11 @@ select {
     footer .topBox .leftBox .customSelect .linkList li:not(:last-of-type) {
         margin-bottom: 24px;
     }
+    footer .topBox .leftBox .customSelect .linkList li a{display: block;}
     footer .topBox .rightBox h3 {
-        color: #FFF;
+        color: rgba(255, 255, 255, 0.5);
         margin-bottom: 20px;
-        font-size: 16px !important;
+        font-size: 11px !important;
     }
     footer .topBox .rightBox ul {
         display: flex;
@@ -555,8 +567,12 @@ select {
         background-color: rgba(255, 255, 255, 0.1);
     }
     footer .topBox .rightBox ul>li h4 {
-        color: #7D6CFF;
+        color: #519AE8;
         margin-bottom: 24px;
+        
+        background-image: url('../images/kcab_icon_more_tr_gray.svg');
+        background-position: right top;
+        background-repeat: no-repeat;
     }
     footer .topBox .rightBox ul>li h4 span {
         color: rgba(255, 255, 255, 0.4);
@@ -584,6 +600,20 @@ select {
     footer .topBox .rightBox ul>li ol li a.infoEmail::before {
         content: 'E ';
     }
+    footer .topBox .rightBox ul>li.mailBox{
+        background-color: var(--vs400);
+        line-height: 20px;
+        color: #FFF;
+
+        font-size: 20px;
+
+        background-image: url('../images/kcab_icon_mail.svg');
+        background-position: calc(100% - 24px) center;
+        background-repeat: no-repeat;
+    }
+    footer .topBox .rightBox ul>li.mailBox img{
+        display: none;
+    }
     footer .bottomBox {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         padding-block: 24px;
@@ -601,9 +631,21 @@ select {
     }
     footer .bottomBox .innerBox ul li {
         display: inline-block;
+        position: relative;
+        padding-left: 16px;
+    }
+    footer .bottomBox .innerBox ul li::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.6);
+
+        left: 0; top: 5px;
     }
     footer .bottomBox .innerBox ul li:not(:last-of-type) {
-        margin-right: 24px;
+        margin-right: 20px;
     }
 }
 
@@ -1082,6 +1124,8 @@ select {
         background-color: var(--vs400);
         line-height: 20px;
         color: #FFF;
+
+        font-size: 17px;
     }
     footer .topBox .rightBox ul>li.mailBox img{
         margin-top: 20px;

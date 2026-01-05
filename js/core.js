@@ -15,6 +15,7 @@ $(document).ready(function(){
     menuDropPanel();
     siteMapFunction();
     customSelect();
+    customSelectSub();
 });
 
 function activeAddClass(){
@@ -71,6 +72,13 @@ function siteMapFunction(){
 
 function customSelect(){
     $('footer .customSelect button').click(function(){
+        console.log(1);
+        $(this).siblings().toggleClass('active');
+    });
+}
+
+function customSelectSub(){
+    $('.subContent>ol button').click(function(){
         console.log(1);
         $(this).siblings().toggleClass('active');
     });
