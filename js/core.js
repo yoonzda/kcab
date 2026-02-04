@@ -16,6 +16,7 @@ $(document).ready(function(){
     // siteMapFunction();
     customSelect();
     customSelectSub();
+    tabButtonFunction();
 });
 
 function activeAddClass(){
@@ -81,5 +82,18 @@ function customSelectSub(){
     $('.subContent>ol button').click(function(){
         console.log(1);
         $(this).siblings().toggleClass('active');
+    });
+}
+
+function tabButtonFunction(){
+    $('.tabButtonBox button').click(function(){
+        var tabID = $(this).attr('data-tabName');
+
+        $('.tabButtonBox button').removeClass('active');
+        $(this).addClass('active');
+
+        $('.tabContent').removeClass('active');
+        $('#'+tabID).addClass('active');
+
     });
 }

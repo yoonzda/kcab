@@ -1107,3 +1107,6 @@ input:focus{outline: none;}
 .subVisual.sub04::after{background-image: url('../images/kcab_bg_sub04_right.png');}
 .subVisual.sub05{background-image: url('../images/kcab_bg_sub05_left.png');}
 .subVisual.sub05::after{background-image: url('../images/kcab_bg_sub05_right.png');}
+
+.tabContent:not(.active){display: none;}
+.tabContent.active{display: block;}
