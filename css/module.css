@@ -111,3 +111,5 @@
     .mui{display: none;}
     .dui{display: block;}
 }
+
+.ellipsisText{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}

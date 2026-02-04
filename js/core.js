@@ -12,8 +12,8 @@ $(document).ready(function(){
 
     $('.dep02List li').hover(activeToggleClass);
 
-    menuDropPanel();
-    siteMapFunction();
+    // menuDropPanel();
+    // siteMapFunction();
     customSelect();
     customSelectSub();
 });

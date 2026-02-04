@@ -16,6 +16,8 @@ select{
     appearance: none
 }
 
+input:focus{outline: none;}
+
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-results-button {
     display: none;
@@ -1100,3 +1102,8 @@ select{
         margin-right: 24px;
     }
 }
+
+.subVisual.sub04{background-image: url('../images/kcab_bg_sub04_left.png');}
+.subVisual.sub04::after{background-image: url('../images/kcab_bg_sub04_right.png');}
+.subVisual.sub05{background-image: url('../images/kcab_bg_sub05_left.png');}
+.subVisual.sub05::after{background-image: url('../images/kcab_bg_sub05_right.png');}

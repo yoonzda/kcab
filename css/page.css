@@ -460,10 +460,10 @@
     .subContent>ol{
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #EBEBEB; 
+        border-bottom: 1px solid rgba(102, 102, 102, 0.3);
 
         position: absolute;
-        width: 100%;
+        width: 92%;
         left: 0;
         z-index: 1;
         
@@ -471,31 +471,12 @@
 
         box-sizing: border-box;
         list-style: none;
+
+        margin-inline: 4%;
     }
     .subContent>ol>li{
         padding-block: 24px;
-
-    }
-    .subContent>ol>li:first-of-type{
-        width: 60px;
-        /* height: 60px; */
-        box-sizing: border-box;
-
-        text-indent: -9999px;
-        background-image: url('../images/kcab_icon_home_gray.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .subContent>ol>li:first-of-type a{
-        display: block;
-    }
-    .subContent>ol>li:not(:first-of-type){
-        border-left: 1px solid #EBEBEB;
-        padding-inline: 16px;
-
         flex: 1;
-
-        position: relative;
     }
     .subContent>ol>li button{
         display: block;
@@ -503,7 +484,7 @@
         height: inherit;
         text-align: left;
 
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 130%;
         color: #666;
@@ -517,7 +498,7 @@
 
         position: absolute;
         right: 0;
-        top: 0;
+        top: 5px;
 
         background-image: url('../images/kcab_icon_down.svg');
         background-position: right center;
@@ -533,16 +514,15 @@
     }
     .subContent>ol li ul{
         position: absolute;
-        background-color: #F5F5F5;
+        background-color: #F7FDFF;
 
         width: 100%;
         left: 0;
-        transform: translate(0, 24px);
+        transform: translate(0, 25px);
 
         list-style: none;
-        text-align: center;
 
-        font-size: 11px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 130%;
         color: #434343;
@@ -551,22 +531,63 @@
         padding: 12px 20px;
     }
     .subContent>ol li ul li:not(:last-of-type){
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #EBF1F6;
     }
-    /* .subContent aside h3{color: #222; margin-bottom: 24px;}
-    .subContent aside ol{border-top: 1px solid #EBEBEB;}
-    .subContent aside ol li{border-bottom: 1px solid #EBEBEB; display: block; padding: 24px 16px; font-size: 15px; font-weight: 400; line-height: 140%; position: relative;}
-    .subContent aside ol li.active,
-    .subContent aside ol li:hover{border-bottom: 1px solid var(--primary); font-weight: 600; color: var(--primary);}
-    .subContent aside ol li::before{content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: var(--primary); top: 50%; transform: translate(0, -50%); clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
-    .subContent aside ol li::after{content: ''; position: absolute; width: 16px; height: 16px; right: 16px; top: 50%; transform: translate(0, -50%); background-image: url('../images/kcab_icon_more_blue.svg'); background-repeat: no-repeat; background-position: -16px center; transition: background ease-out .2s;}
-    .subContent aside ol li a{text-decoration: none; color: inherit; padding-right: 20px; display: inline-block; box-sizing: border-box; transition: padding ease-out .2s;}
-    .subContent aside ol li.active a,
-    .subContent aside ol li:hover a{padding-left: 12px;}
-    .subContent aside ol li.active::before,
-    .subContent aside ol li:hover::before{clip-path: circle(50% at 50% 50%);}
-    .subContent aside ol li.active::after,
-    .subContent aside ol li:hover::after{background-position: center;} */
+
+    /* ? sub 05 - 01 Press Release */
+    .subVisual{
+        height: 180px;
+        position: relative;
+        margin-block: 10px 0;
+        margin-inline: 4%;
+
+        display: flex;
+        align-items: center;
+    }
+    .subVisual::after{
+        content: ''; display: block;
+        width: 30%; height: 180px;
+        position: absolute; right: 0; top: 0;
+        background-position: center;
+    }
+    .subVisual.colorBlack div{color: #222;}
+    .subVisual.colorWhite div{color: #FFF;}
+    .subVisual.colorBlack div ul li a{background-image: url('../images/kcab_icon_home_black.svg');}
+    .subVisual.colorWhite div ul li a{background-image: url('../images/kcab_icon_home.svg');}
+    .subVisual.colorBlack div ul li span::before{background-color: rgba(0, 0, 0, 0.2);}
+    .subVisual.colorWhite div ul li span::before{background-color: rgba(255, 255, 255, 0.3);}
+    .subVisual div{
+        padding-inline: 24px;
+    }
+    .subVisual div ul{
+        display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+    }
+    .subVisual div ul li{
+        display: block;
+    }
+    .subVisual div ul li a{
+        display: block;
+        text-indent: -9999px;
+        
+        width: 12px; height: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 11px;
+    }
+    .subVisual div ul li span{
+        font-size: 13px; font-weight: 400; line-height: 140%;
+        padding-left: 8px;
+        position: relative;
+    }
+    .subVisual div ul li span::before{
+        content: '';
+        display: block;
+        width: 3px; height: 3px; border-radius: 50%;
+        position: absolute; left: 0; top: 8px;
+    }
+    .subVisual div h2{
+        font-size: 30px; font-weight: 400;
+    }
 }
 
 .wave {
@@ -735,157 +756,6 @@
     .eventContainer ul li span{color: #222; margin-bottom: 24px; line-height: 140%; display: block;}
     .eventContainer ul li a{width: 190px; height: 50px; line-height: 50px; text-align: center;}
 
-
-    /* ? 02 search */
-    /* .searchContainer {
-        padding-block: 140px;
-    }
-    .searchContainer h2 {
-        text-align: center;
-        margin-bottom: 12px;
-        color: #222;
-    }
-    .searchContainer p {
-        text-align: center;
-        margin-bottom: 32px;
-        color: #626D84;
-    }
-    .searchContainer .searchBox {
-        margin-bottom: 24px;
-    }
-    .searchContainer .searchBox .innerBox {
-        display: flex;
-        gap: 8px;
-        width: 840px;
-        margin: 0 auto;
-    }
-    .searchContainer .searchBox .innerBox select {
-        border: 2px solid #2E57FD;
-        border-radius: 4px;
-        height: 48px;
-        padding-left: 20px;
-        color: #222;
-        position: relative;
-        background-image: url('../images/kcab_select_arrow.svg');
-        background-position: calc(100% - 12px) center;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        background-color: #FFF;
-    }
-    .searchContainer .searchBox .innerBox select:nth-of-type(1) {
-        width: 25%;
-    }
-    .searchContainer .searchBox .innerBox select:nth-of-type(2) {
-        width: 15%;
-    }
-    .searchContainer .searchBox .innerBox div {
-        flex: 1;
-        position: relative;
-        height: 48px;
-        background: linear-gradient(90deg, #542DFD, #6C14FA);
-        padding: 2px;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .searchContainer .searchBox .innerBox div input[type="search"] {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 2px;
-        padding-left: 48px;
-        padding-right: 144px;
-        background-image: url('../images/kcab_icon_search_gray.svg');
-        background-repeat: no-repeat;
-        background-position: 18px center;
-        background-color: #FFF;
-    }
-    .searchContainer .searchBox .innerBox div input[type="search"]::placeholder {
-        color: #626D84;
-    }
-    .searchContainer .searchBox .innerBox div input[type="submit"] {
-        position: absolute;
-        right: 2px;
-        top: 2px;
-        width: 125px;
-        height: 44px;
-        color: #F6F4EE;
-        border: none;
-        border-radius: 4px 2px 2px 4px;
-        background: linear-gradient(90deg, #3400BB, #2E0099);
-        cursor: pointer;
-    }
-    .searchContainer .searchKeyword {
-        border-top: 1px dashed #C4CED8;
-        width: 840px;
-        margin: 0 auto;
-        padding-top: 24px;
-        display: flex;
-        justify-content: center;
-        gap: 6px;
-    }
-    .searchContainer .searchKeyword button {
-        padding: 0 20px;
-        line-height: 44px;
-        border-radius: 22px;
-    }
-    .searchContainer .searchKeyword button::before {
-        content: '# ';
-    } */
-    /* ? 03 news */
-    /* .newsContainer {
-        padding-inline: 4%;
-        max-width: 1440px;
-        margin: 0 auto 150px;
-    }
-    .newsContainer .titleBox {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-    }
-    .newsContainer h2 {
-        color: #222;
-    }
-    .newsContainer a {
-        display: block;
-        padding-right: 18px;
-        background-image: url('../images/kcab_icon_more_right.svg');
-        background-position: right center;
-        background-repeat: no-repeat;
-    }
-    .newsContainer .newsList {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 90px 40px;
-    }
-    .newsContainer .newsList li {
-        display: block;
-        cursor: pointer;
-    }
-    .newsContainer .newsList li img {
-        width: 100%;
-        margin-bottom: 32px;
-    }
-    .newsContainer .newsList li span {
-        color: #222;
-        display: block;
-        margin-bottom: 8px;
-    }
-    .newsContainer .newsList li h3 {
-        color: #222;
-        margin-bottom: 8px;
-    }
-    .newsContainer .newsList li small {
-        color: #222;
-        display: block;
-        margin-bottom: 20px;
-    }
-    .newsContainer .newsList li b {
-        display: inline-block;
-        line-height: 36px;
-        padding-inline: 20px;
-        border-radius: 18px;
-    } */
     /* ? 04 quick menu */
     .quickMenuContainer {
         background-color: #F1F1F1;
@@ -1073,70 +943,6 @@
         height: 50px;
         line-height: 50px;
     }
-
-    /* ? 05 contact */
-    /* .contactContainer {
-        padding-block: 160px;
-        padding-inline: 4%;
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .contactContainer>div {
-        background-image: url('../images/kcab_bg_contact.png');
-        background-repeat: no-repeat;
-        background-position: right center;
-        margin-bottom: 50px;
-    }
-    .contactContainer .contactList {
-        display: flex;
-        gap: 24px;
-    }
-    .contactContainer .contactList li {
-        display: block;
-        flex: 1;
-        border: 1px solid rgba(226, 228, 233, 0.5);
-        border-radius: 16px;
-        padding: 34px;
-    }
-    .contactContainer .contactList li span {
-        display: block;
-        width: 48px;
-        height: 48px;
-        background-color: #F5F4F0;
-        border-radius: 12px;
-        margin-bottom: 24px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    .contactContainer .contactList li:nth-of-type(1) span {
-        background-image: url('../images/kcab_icon_contact_01.svg');
-    }
-    .contactContainer .contactList li:nth-of-type(2) span {
-        background-image: url('../images/kcab_icon_contact_02.svg');
-    }
-    .contactContainer .contactList li:nth-of-type(3) span {
-        background-image: url('../images/kcab_icon_contact_03.svg');
-    }
-    .contactContainer .contactList li h3 {
-        color: #222;
-        line-height: 140%;
-        margin-bottom: 12px;
-    }
-    .contactContainer .contactList li p {
-        color: #676F7E;
-        line-height: 140%;
-        margin-bottom: 36px;
-    }
-    .contactContainer .contactList li a {
-        color: #676F7E;
-        line-height: 140%;
-        display: inline-block;
-        height: 20px;
-        padding-right: 28px;
-        background-image: url('../images/kcab_icon_more_gray.svg');
-        background-repeat: no-repeat;
-        background-position: right center;
-    } */
      
     /* ? sub 01 - 01 kcabInternational */
     .subContainer{padding-top: 100px;}
@@ -1205,8 +1011,9 @@
         top: 120px;
     }
     .subContent>div{
-        flex: 1;
-
+        flex: 1; min-width: 0;
+    }
+    .subContent.sub01>div{
         display: flex;
         gap: 4%;
         align-items: flex-start;
@@ -1268,22 +1075,151 @@
         position: absolute; right: 0; top: 0;
         background-position: center;
     }
-    .subVisual.sub05{
-        background-image: url('../images/kcab_bg_sub05_left.png');
-    }
-    .subVisual.sub05::after{
-        background-image: url('../images/kcab_bg_sub05_right.png');
-    }
+    .subVisual.colorBlack div{color: #222;}
+    .subVisual.colorWhite div{color: #FFF;}
+    .subVisual.colorBlack div ul li a{background-image: url('../images/kcab_icon_home_black.svg');}
+    .subVisual.colorWhite div ul li a{background-image: url('../images/kcab_icon_home.svg');}
+    .subVisual.colorBlack div ul li span::before{background-color: rgba(0, 0, 0, 0.2);}
+    .subVisual.colorWhite div ul li span::before{background-color: rgba(255, 255, 255, 0.3);}
     .subVisual div{
         padding-inline: calc(8% - 36px);
     }
     .subVisual div ul{
-        display: flex;
+        display: flex; align-items: center; gap: 14px; margin-bottom: 32px;
     }
     .subVisual div ul li{
         display: block;
     }
-    .subVisual div ul li span{
-        font-size: 15px; font-weight: 400; line-height: 140%; color: #222;
+    .subVisual div ul li a{
+        display: block;
+        text-indent: -9999px;
+        
+        width: 14px; height: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 13px;
     }
+    .subVisual div ul li span{
+        font-size: 15px; font-weight: 400; line-height: 140%;
+        padding-left: 14px;
+        position: relative;
+    }
+    .subVisual div ul li span::before{
+        content: '';
+        display: block;
+        width: 3px; height: 3px; border-radius: 50%;
+        position: absolute; left: 0; top: 8px;
+    }
+    .subVisual div h2{
+        font-size: 60px; font-weight: 400;
+    }
+    .subContent .searchBox{
+        max-width: 560px; margin: 0 auto;
+        border: 1px solid #121212;
+        
+        display: flex;
+        padding-inline: 24px 0;
+        margin-bottom: 80px;
+    }
+    .subContent .searchBox input{
+        border: none;
+        flex: 1;
+
+        font-size: 16px; font-weight: 400; color: #434343;
+        padding-inline: 24px;
+
+        background-image: url('../images/kcab_icon_search_999.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    .subContent .searchBox input::placeholder{color: #999;}
+    .subContent .searchBox button{
+        font-size: 16px; font-weight: 600; color: #FFF;
+        background-color: #121212;
+        
+        width: 120px; height: 54px;
+    }
+    .blueChip{
+        display: inline-block;
+        font-size: 14px; font-weight: 600; color: #294DC7; background-color: rgba(41, 77, 199, 0.05);
+        padding: 5px 14px; border-radius: 15px;
+
+        margin-bottom: 20px;
+    }
+    .listType1{
+        list-style: none;
+        border-top: 1px solid #DDD;
+
+        margin-bottom: 80px;
+    }
+    .listType1>li{
+        padding-block: 50px;
+        padding-inline: 24px 124px;
+        border-bottom: 1px solid #DDD;
+
+        position: relative;
+        cursor: pointer;
+    }
+    .listType1>li::before{
+        content: '';
+        display: block;
+        width: 0; height: 2px;
+        background-color: #121212;
+        position: absolute;
+        left: 0; bottom: 0;
+
+        transition: width ease-out .6s;
+    }
+    .listType1>li:hover::before{
+        width: 100%;
+    }
+    .listType1>li::after{
+        content: '';
+        display: block;
+        width: 100px; height: 100px;
+
+        background-image: url('../images/kcab_icon_more_list.svg');
+        background-repeat: no-repeat;
+        background-position: -100px center;
+
+        position: absolute; right: 24px; top: 50%; transform: translate(0, -50%);
+
+        transition: background-position ease-out .4s;
+    }
+    .listType1>li:hover::after{background-position: center;}
+    .listType1>li h3{
+        font-size: 24px; font-weight: 400; line-height: 140%; color: #222;
+
+        margin-bottom: 12px;
+    }
+    .listType1>li p{
+        font-size: 18px; font-weight: 400; line-height: 140%; color: #626D84;
+    }
+    .pagerBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .pagerBox>a{
+        display: block;
+        text-indent: -9999px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 14px; height: 14px;
+    }
+    .pagerBox>a[class*="Start"]{background-image: url('../images/kcab_icon_start.svg');}
+    .pagerBox>a[class*="Prev"]{background-image: url('../images/kcab_icon_prev.svg');}
+    .pagerBox>a[class*="Next"]{background-image: url('../images/kcab_icon_next.svg');}
+    .pagerBox>a[class*="End"]{background-image: url('../images/kcab_icon_end.svg');}
+    .pagerBox div{
+        display: flex; gap: 30px; margin-inline: 12px;
+    }
+    .pagerBox div a{
+        font-size: 16px; font-weight: 600; 
+    }
+    .pagerBox div a:not(.active){color: #999;}
+    .pagerBox div a.active{color: #294DC7; text-decoration: underline;}
+    .pagerBox div a:hover{color: #294DC7;}
 }
