@@ -1018,7 +1018,7 @@
         gap: 4%;
         align-items: flex-start;
     }
-    .subContent>div div:has(img){
+    .subContent.sub01>div div:has(img){
         max-width: 460px;
         width: 30vw;
         height: 51vw;
@@ -1027,7 +1027,7 @@
         position: sticky;
         top: 120px;
     }
-    .subContent>div div img{
+    .subContent.sub01>div div img{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1037,7 +1037,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
-    .subContent>div div:has(p){
+    .subContent.sub01>div div:has(p){
         flex: 1;
     }
     .subContent .conText li{line-height: 140%; list-style: none;}
