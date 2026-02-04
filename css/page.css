@@ -1279,7 +1279,16 @@
     .listType3 li div{border-top: 1px solid #121212; padding-top: 28px;}
     .listType3 li div span{font-size: 20px; font-weight: 500; line-height: 140%; color: #222;}
 
-    .listType4{list-style: none; margin-bottom: 80px;}}
+    .listType4{list-style: none; margin-bottom: 80px;}
+    .listType4 li:not(:last-of-type){margin-bottom: 20px;}
+    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 36px; padding-inline: 40px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
+    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);}
+    .listType4 li h4::before{content: 'Q. '; font-weight: 700; display: inline-block; margin-right: 12px;}
+    .listType4 li h4::after{content: ''; display: block; width: 24px; height: 24px; position: absolute; right: 40px; top: 50%; transform: translate(0, -50%); background-repeat: no-repeat; background-position: center; background-image: url('../images/kcab_icon_faq_p.svg');}
+    .listType4 li.active h4::after{background-image: url('../images/kcab_icon_faq_m.svg');}
+    .listType4 li h4 span{margin: 0 0 0 12px; line-height: 120%;}
+    .listType4 li div{border: 1px solid #DDD; background-color: #FAFAFA; padding: 32px 40px;}
+    .listType4 li div p{font-size: 17px; font-weight: 400; color: #434343; line-height: 150%;}
 
     .listType5{list-style: none; margin-bottom: 80px;}
     .listType5 li{display: flex; gap: 20px;}
