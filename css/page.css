@@ -418,7 +418,7 @@
         position: relative;
 
         padding-top: 100px;
-        padding-bottom: 130px;
+        padding-bottom: 100px;
     }
     /* .subContent aside{
         width: 260px;
@@ -426,14 +426,14 @@
         position: sticky;
         top: 120px;
     } */
-    .subContent>div{
+    .subContent>div.sub01{
         flex: 1;
 
         /* display: flex; */
         /* gap: 4%; */
         align-items: flex-start;
     }
-    .subContent>div div:has(img){
+    .subContent>div.sub01 div:has(img){
         /* max-width: 460px; */
         /* width: 30vw; */
         /* height: 51vw; */
@@ -444,13 +444,13 @@
         /* top: 120px; */
         margin-bottom: 32px;
     }
-    .subContent>div div img{
+    .subContent>div.sub01 div img{
         width: 100%;
         display: block;
         max-width: 460px;
         margin: 0 auto;
     }
-    .subContent>div div:has(p){
+    .subContent>div.sub01 div:has(p){
         flex: 1;
     }
     .subContent .conText li{line-height: 140%; list-style: none;}
@@ -588,6 +588,195 @@
     .subVisual div h2{
         font-size: 30px; font-weight: 400;
     }
+
+    /* ? sub list */
+    .subContent .searchBox{
+        max-width: 560px; margin: 0 auto;
+        border: 1px solid #121212;
+        
+        display: flex;
+        padding-inline: 24px 0;
+        margin-bottom: 40px;
+    }
+    .subContent .searchBox input{
+        border: none;
+        flex: 1;
+
+        font-size: 14px; font-weight: 400; color: #434343;
+        padding-inline: 24px;
+
+        background-image: url('../images/kcab_icon_search_999.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        background-color: #FFF;
+    }
+    .subContent .searchBox input::placeholder{color: #999;}
+    .subContent .searchBox button{
+        font-size: 14px; font-weight: 600; color: #FFF;
+        background-color: #121212;
+        
+        width: 80px; height: 54px;
+    }
+    .blueChip{
+        font-family: 'Onest';
+        display: inline-block;
+        font-size: 12px; font-weight: 600; color: #294DC7; background-color: rgba(41, 77, 199, 0.05);
+        padding: 5px 14px; border-radius: 15px;
+
+        margin-bottom: 12px;
+    }
+    .listType1{
+        list-style: none;
+        border-top: 1px solid #DDD;
+
+        margin-bottom: 60px;
+    }
+    .listType1>li{
+        padding-block: 24px;
+        padding-inline: 16px;
+        border-bottom: 1px solid #DDD;
+
+        position: relative;
+        cursor: pointer;
+    }
+    /* .listType1>li::before{
+        content: '';
+        display: block;
+        width: 0; height: 2px;
+        background-color: #121212;
+        position: absolute;
+        left: 0; bottom: 0;
+
+        transition: width ease-out .6s;
+    }
+    .listType1>li:hover::before{
+        width: 100%;
+    } */
+    /* .listType1>li::after{
+        content: '';
+        display: block;
+        width: 100px; height: 100px;
+
+        background-image: url('../images/kcab_icon_more_list.svg');
+        background-repeat: no-repeat;
+        background-position: -100px center;
+
+        position: absolute; right: 24px; top: 50%; transform: translate(0, -50%);
+
+        transition: background-position ease-out .4s;
+    } */
+    .listType1>li:hover::after{background-position: center;}
+    .listType1>li h3{
+        font-size: 20px; font-weight: 400; line-height: 140%; color: #222;
+
+        margin-bottom: 12px;
+    }
+    .listType1>li p{
+        font-size: 14px; font-weight: 400; line-height: 140%; color: #626D84;
+    }
+    .pagerBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    .pagerBox>a{
+        display: block;
+        text-indent: -9999px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 14px; height: 14px;
+    }
+    .pagerBox>a[class*="Start"]{background-image: url('../images/kcab_icon_start.svg');}
+    .pagerBox>a[class*="Prev"]{background-image: url('../images/kcab_icon_prev.svg');}
+    .pagerBox>a[class*="Next"]{background-image: url('../images/kcab_icon_next.svg');}
+    .pagerBox>a[class*="End"]{background-image: url('../images/kcab_icon_end.svg');}
+    .pagerBox div{
+        display: flex; gap: 16px; margin-inline: 8px;
+    }
+    .pagerBox div a{
+        font-size: 16px; font-weight: 600; 
+    }
+    .pagerBox div a:not(.active){color: #999;}
+    .pagerBox div a.active{color: #294DC7; text-decoration: underline;}
+    .pagerBox div a:hover{color: #294DC7;}
+
+    .tabButtonBox{display: flex; list-style: none; margin-bottom: 60px;}
+    .tabButtonBox li{flex: 1;}
+    .tabButtonBox li button{
+        width: 100%;
+        font-size: 16px; height: 60px;
+    }
+    .tabButtonBox li button:not(.active){font-weight: 400; color: #666; background-color: #F6F6F6;}
+    .tabButtonBox li button.active{font-weight: 700; color: #FFF; background-color: #294DC7;}
+
+    .detailPage.titleBox{padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #121212;}
+    .detailPage.titleBox h3{font-size: 24px; font-weight: 500; color: #222; line-height: 140%;}
+    .detailPage.contentBox{padding-bottom: 50px; border-bottom: 1px solid #DDD; margin-bottom: 60px;}
+    .detailPage.contentBox img{width: 100%; margin-bottom: 32px;}
+    .detailPage.contentBox ul.textBox{list-style: none; margin-bottom: 60px;}
+    .detailPage.contentBox ul.textBox li:not(:last-of-type){margin-bottom: 40px;}
+    .detailPage.contentBox ul.textBox li h4{font-size: 20px; font-weight: 600; color: #222; line-height: 140%;}
+    .detailPage.contentBox ul.textBox li p{margin-top: 14px; font-size: 18px; font-weight: 400; line-height: 150%; color: #434343;}
+    .detailPage.bottomText{margin-bottom: 60px;}
+    .detailPage.bottomText p{font-size: 18px; font-weight: 400; color: #222; line-height: 140%;}
+    .detailPage.bottomText p b{font-weight: 700;}
+    .detailPage.fileList{}
+    .detailPage.fileList li{background-color: #FAFAFA; border: 1px solid #F5F5F5; padding: 24px 32px 24px 76px; list-style: none; background-image: url('../images/kcab_icon_pdf.svg'); background-position: 32px center; background-repeat: no-repeat;}
+    .detailPage.fileList li:not(:last-of-type){margin-bottom: 12px;}
+    .detailPage.fileList li a{font-size: 14px; font-weight: 400; line-height: 150%; color: #666; display: block; padding-right: 72px; background-image: url('../images/kcab_icon_download.svg'); background-repeat: no-repeat; background-position: right center;}
+
+    .buttonBox{display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;}
+    .buttonBox a{width: 240px; height: 60px; line-height: 60px; text-align: center; box-sizing: border-box;}
+    .buttonBox .listButton{font-size: 14px; font-weight: 700; color: #FFF; background-color: #294DC7;}
+    .buttonBox .linkButton{font-size: 14px; font-weight: 600; color: #999; background-color: #FFF; border: 1px solid #DDDDDD;}
+    .buttonBox .linkButton img{width: 16px;}
+
+    .listType2{list-style: none; margin-bottom: 80px;}
+    .listType2 li{display: flex; gap: 20px; align-items: flex-start; cursor: pointer; flex-direction: column;}
+    .listType2 li:not(:last-of-type){margin-bottom: 44px;}
+    .listType2 li img{width: 100%; max-width: 420px;}
+    .listType2 li div{flex: 1;}
+    .listType2 li div mark{font-size: 14px; font-weight: 600; line-height: 140%; color: #294DC7; display: block; margin-bottom: 4px;}
+    .listType2 li div p{font-size: 18px; font-weight: 500; line-height: 140%; color: #222; margin-bottom: 16px;}
+    .listType2 li div span{font-size: 14px; font-weight: 400; line-height: 140%; color: #626D84; display: block; margin-bottom: 28px;}
+    .listType2 li div a{display: inline-block; padding-inline: 18px 38px; height: 40px; line-height: 40px; font-size: 14px; font-weight: 600; background-repeat: no-repeat; background-position: calc(100% - 16px) center;}
+    .listType2 li.active div a{border: 1px solid #121212; color: #121212; background-color: #FFF; background-image: url('../images/kcab_icon_left_black.svg');}
+    .listType2 li.deactive div a{color: #999; background-color: #EBEBEB; background-image: url('../images/kcab_icon_left_gray.svg');}
+
+    .detailPage.infoBox{margin-bottom: 32px;}
+    .detailPage.infoBox li{display: flex; align-items: center; gap: 12px;}
+    .detailPage.infoBox li:not(:last-of-type){margin-bottom: 12px;}
+    .detailPage.infoBox li p{font-size: 14px; font-weight: 400; line-height: 150%; color: #434343;}
+    .registerButton{display: inline-block; padding-inline: 18px 38px; height: 40px; line-height: 40px; font-size: 14px; font-weight: 600; background-repeat: no-repeat; background-position: calc(100% - 16px) center;}
+    .registerButton{border: 1px solid #121212; color: #121212; background-color: #FFF; background-image: url('../images/kcab_icon_left_black.svg');}
+
+    .listType3{list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 60px 5%; margin-bottom: 80px;}
+    .listType3 li{width: 100%; max-width: 374px;}
+    .listType3 li img{width: 100%; margin-bottom: 20px;}
+    .listType3 li div{border-top: 1px solid #121212; padding-top: 28px;}
+    .listType3 li div span{font-size: 18px; font-weight: 500; line-height: 140%; color: #222;}
+
+    .listType4{list-style: none; margin-bottom: 80px;}
+    .listType4 li:not(:last-of-type){margin-bottom: 20px;}
+    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 24px; padding-inline: 32px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
+    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);}
+    .listType4 li h4::before{content: 'Q. '; font-weight: 700; display: inline-block; margin-right: 12px;}
+    .listType4 li h4::after{content: ''; display: block; width: 24px; height: 24px; position: absolute; right: 32px; top: 50%; transform: translate(0, -50%); background-repeat: no-repeat; background-position: center; background-image: url('../images/kcab_icon_faq_p.svg');}
+    .listType4 li.active h4::after{background-image: url('../images/kcab_icon_faq_m.svg');}
+    .listType4 li h4 span{margin: 0 0 0 12px; line-height: 120%;}
+    .listType4 li div{border: 1px solid #DDD; background-color: #FAFAFA; padding: 32px 40px;}
+    .listType4 li div p{font-size: 17px; font-weight: 400; color: #434343; line-height: 150%;}
+
+    .listType5{list-style: none; margin-bottom: 80px;}
+    .listType5 li{display: flex; flex-direction: column;}
+    .listType5 li:not(:last-of-type){margin-bottom: 44px;}
+    .listType5 li img{max-width: 380px; width: 100%;}
+    .listType5 li div{flex: 1; padding-top: 20px;}
+    .listType5 li div h4{font-size: 18px; font-weight: 500; line-height: 140%; color: #222; margin-bottom: 6px;}
+    .listType5 li div p{font-size: 14px; font-weight: 400; line-height: 140%; color: #626D84;}
 }
 
 .wave {
@@ -1114,6 +1303,8 @@
     .subVisual div h2{
         font-size: 60px; font-weight: 400;
     }
+
+    /* ? sub list */
     .subContent .searchBox{
         max-width: 560px; margin: 0 auto;
         border: 1px solid #121212;
@@ -1141,6 +1332,7 @@
         width: 120px; height: 54px;
     }
     .blueChip{
+        font-family: 'Onest';
         display: inline-block;
         font-size: 14px; font-weight: 600; color: #294DC7; background-color: rgba(41, 77, 199, 0.05);
         padding: 5px 14px; border-radius: 15px;
