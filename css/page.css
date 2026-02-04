@@ -1222,4 +1222,13 @@
     .pagerBox div a:not(.active){color: #999;}
     .pagerBox div a.active{color: #294DC7; text-decoration: underline;}
     .pagerBox div a:hover{color: #294DC7;}
+
+    .tabButtonBox{display: flex; list-style: none; margin-bottom: 100px;}
+    .tabButtonBox li{flex: 1;}
+    .tabButtonBox li button{
+        width: 100%;
+        font-size: 16px; height: 60px;
+    }
+    .tabButtonBox li button:not(.active){font-weight: 400; color: #666; background-color: #F6F6F6;}
+    .tabButtonBox li button.active{font-weight: 700; color: #FFF; background-color: #294DC7;}
 }
