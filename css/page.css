@@ -536,7 +536,7 @@
 
     /* ? sub 05 - 01 Press Release */
     .subVisual{
-        height: 180px;
+        height: 52vw; max-height: 640px;
         position: relative;
         margin-block: 10px 0;
         margin-inline: 4%;
@@ -546,7 +546,7 @@
     }
     .subVisual::after{
         content: ''; display: block;
-        width: 30%; height: 180px;
+        width: 30%; height: 52vw; max-height: 640px;
         position: absolute; right: 0; top: 0;
         background-position: center;
     }
@@ -640,32 +640,6 @@
         position: relative;
         cursor: pointer;
     }
-    /* .listType1>li::before{
-        content: '';
-        display: block;
-        width: 0; height: 2px;
-        background-color: #121212;
-        position: absolute;
-        left: 0; bottom: 0;
-
-        transition: width ease-out .6s;
-    }
-    .listType1>li:hover::before{
-        width: 100%;
-    } */
-    /* .listType1>li::after{
-        content: '';
-        display: block;
-        width: 100px; height: 100px;
-
-        background-image: url('../images/kcab_icon_more_list.svg');
-        background-repeat: no-repeat;
-        background-position: -100px center;
-
-        position: absolute; right: 24px; top: 50%; transform: translate(0, -50%);
-
-        transition: background-position ease-out .4s;
-    } */
     .listType1>li:hover::after{background-position: center;}
     .listType1>li h3{
         font-size: 20px; font-weight: 400; line-height: 140%; color: #222;
@@ -676,32 +650,12 @@
         font-size: 14px; font-weight: 400; line-height: 140%; color: #626D84;
     }
     .pagerBox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
+        display: none;
     }
-    .pagerBox>a{
-        display: block;
-        text-indent: -9999px;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        width: 14px; height: 14px;
+    .loadButton{
+        width: 120px; height: 40px; margin: 0 auto;
+        font-size: 14px; font-weight: 400; color: #0F1A2E; border: 1px solid #3D557F;
     }
-    .pagerBox>a[class*="Start"]{background-image: url('../images/kcab_icon_start.svg');}
-    .pagerBox>a[class*="Prev"]{background-image: url('../images/kcab_icon_prev.svg');}
-    .pagerBox>a[class*="Next"]{background-image: url('../images/kcab_icon_next.svg');}
-    .pagerBox>a[class*="End"]{background-image: url('../images/kcab_icon_end.svg');}
-    .pagerBox div{
-        display: flex; gap: 16px; margin-inline: 8px;
-    }
-    .pagerBox div a{
-        font-size: 16px; font-weight: 600; 
-    }
-    .pagerBox div a:not(.active){color: #999;}
-    .pagerBox div a.active{color: #294DC7; text-decoration: underline;}
-    .pagerBox div a:hover{color: #294DC7;}
 
     .tabButtonBox{display: flex; list-style: none; margin-bottom: 60px;}
     .tabButtonBox li{flex: 1;}
@@ -761,9 +715,9 @@
 
     .listType4{list-style: none; margin-bottom: 80px;}
     .listType4 li:not(:last-of-type){margin-bottom: 20px;}
-    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 24px; padding-inline: 32px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
-    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);}
-    .listType4 li h4::before{content: 'Q. '; font-weight: 700; display: inline-block; margin-right: 12px;}
+    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 24px; padding-inline: 54px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
+    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); font-weight: 600;}
+    .listType4 li h4::before{content: 'Q. '; font-weight: 700; position: absolute; left: 24px;}
     .listType4 li h4::after{content: ''; display: block; width: 24px; height: 24px; position: absolute; right: 32px; top: 50%; transform: translate(0, -50%); background-repeat: no-repeat; background-position: center; background-image: url('../images/kcab_icon_faq_p.svg');}
     .listType4 li.active h4::after{background-image: url('../images/kcab_icon_faq_m.svg');}
     .listType4 li h4 span{margin: 0 0 0 12px; line-height: 120%;}
@@ -1473,9 +1427,9 @@
 
     .listType4{list-style: none; margin-bottom: 80px;}
     .listType4 li:not(:last-of-type){margin-bottom: 20px;}
-    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 36px; padding-inline: 40px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
-    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);}
-    .listType4 li h4::before{content: 'Q. '; font-weight: 700; display: inline-block; margin-right: 12px;}
+    .listType4 li h4{border: 1px solid #DDD; background-color: #FFF; padding-block: 36px; padding-inline: 72px 64px; font-size: 18px; font-weight: 400; line-height: 160%; color: #222; cursor: pointer; position: relative;}
+    .listType4 li.active h4{border-color: #121212; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); font-weight: 600;}
+    .listType4 li h4::before{content: 'Q. '; font-weight: 700; position: absolute; left: 40px;}
     .listType4 li h4::after{content: ''; display: block; width: 24px; height: 24px; position: absolute; right: 40px; top: 50%; transform: translate(0, -50%); background-repeat: no-repeat; background-position: center; background-image: url('../images/kcab_icon_faq_p.svg');}
     .listType4 li.active h4::after{background-image: url('../images/kcab_icon_faq_m.svg');}
     .listType4 li h4 span{margin: 0 0 0 12px; line-height: 120%;}
