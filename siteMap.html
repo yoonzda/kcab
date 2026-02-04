@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KCAB INTERNATIONAL</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-
-    <script src="js/swiper.js" defer></script>
-    <script src="js/gsap.js" defer></script>
-    <script src="js/core.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.css">
+    <title>대한상사 국제 중재원</title>
     <link rel="stylesheet" href="css/import.css">
+    <style>
+        .contentWrap h3+ol{margin-bottom: 100px;}
+        .contentWrap ol{list-style: none;}
+        .contentWrap h3+ol>li:not(:last-of-type){margin-bottom: 60px;}
+        .contentWrap ol li h4{font-size: 24px; margin-bottom: 20px;}
+        .contentWrap ol li ol li a{transition: all ease-out .1s; font-size: 18px;}
+        .contentWrap ol li ol li a:hover{color: #294DC7; text-decoration: underline;}
+    </style>
+
 </head>
 <body>
-
     <header>
         <div class="menuDefault">
             <h1>
@@ -220,173 +214,24 @@
     </header>
     <div class="contentWrap" id="smooth-wrapper">
         <div id="smooth-content">
-            <div class="mainSlideContainer swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="innerBox">
-                            <div class="textBox">
-                                <h2 class="fonwR68">
-                                    <p class="wave" data-text="Innovating the Future">Innovating the Future</p>
-                                    <p class="wave" data-text="of International Arbitration">of International Arbitration</p>
-                                </h2>
-                                <a href="javascript:void(0)" class="btnDefault fonwR16">Read More</a>
-                            </div>
-                            <div class="imageBox">
-                                <img src="images/kcab_bg_slide_01_01.png" alt="slide image 01">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="innerBox">
-                            <div class="textBox">
-                                <h2 class="fonwR68">
-                                    <p class="wave" data-text="Innovating the Future">Innovating the Future</p>
-                                    <p class="wave" data-text="of International Arbitration">of International Arbitration</p>
-                                </h2>
-                                <a href="javascript:void(0)" class="btnDefault">Read More</a>
-                            </div>
-                            <div class="imageBox">
-                                <img src="images/kcab_bg_slide_01_01.png" alt="slide image 01">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="innerBox">
-                            <div class="textBox">
-                                <h2 class="fonwR68">
-                                    <p class="wave" data-text="Innovating the Future">Innovating the Future</p>
-                                    <p class="wave" data-text="of International Arbitration">of International Arbitration</p>
-                                </h2>
-                                <a href="javascript:void(0)" class="btnDefault">Read More</a>
-                            </div>
-                            <div class="imageBox">
-                                <img src="images/kcab_bg_slide_01_01.png" alt="slide image 01">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="innerBox">
-                            <div class="textBox">
-                                <h2 class="fonwR68">
-                                    <p class="wave" data-text="Innovating the Future">Innovating the Future</p>
-                                    <p class="wave" data-text="of International Arbitration">of International Arbitration</p>
-                                </h2>
-                                <a href="javascript:void(0)" class="btnDefault">Read More</a>
-                            </div>
-                            <div class="imageBox">
-                                <img src="images/kcab_bg_slide_01_01.png" alt="slide image 01">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainSlideControl fonwM26">
-                    <div class="swiper-button-next fon">→</div>
-                    <div class="swiper-button-prev fon">←</div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-            <div class="newsContainer">
+            <div class="newsContainer" style="padding-top: 60px;">
                 <h3 class="title2 fonwM40">
-                    Latest News
-                    <a href="" class="fonwR18">More</a>
+                    Site Map
                 </h3>
-                <ul>
+                <ol>
                     <li>
-                        <h4 class="fonwR22">KCAB International Announces the Official Release of the 2026 KCAB International Arbitration Rules – Setting a New Global Standard for Institutional Arbitration</h4>
-                        <span class="fonwR16">November 3, 2025</span>
-                    </li>
-                    <li>
-                        <h4 class="fonwR22">[Announcement] 2026 KCAB International Arbitration Rules (ENG / KOR)</h4>
-                        <span class="fonwR16">November 3, 2025</span>
-                    </li>
-                    <li>
-                        <h4 class="fonwR22">KCAB International Joins Jus Mundi’s Global Partnership Network to Support Open Access to Arbitration</h4>
-                        <span class="fonwR16">November 3, 2025</span>
-                    </li>
-                    <li>
-                        <h4 class="fonwR22">[Invitation] Seoul ADR Festival 2025</h4>
-                        <span class="fonwR16">November 3, 2025</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="eventContainer">
-                <h3 class="title2 fonwM40">
-                    Upcoming Events
-                    <a href="" class="fonwR18">More</a>
-                </h3>
-                <ul>
-                    <li>
-                        <img src="images/kcab_bg_event_01.png" alt="event image">
-                        <h4 class="fonwS">Korea as a Hub for International Arbitration: Recent and Future Directions</h4>
-                        <small class="fonwR15">11 September, 2025</small>
-                        <span class="fonwR22">LimNexus LLP LA Office (Hybrid)</span>
-                        <a href="javascript:void(0)" class="btnDefault fonwR18">Online Registration</a>
-                    </li>
-                    <li>
-                        <img src="images/kcab_bg_event_02.png" alt="event image">
-                        <h4 class="fonwS30">KCAB International Year-End Party</h4>
-                        <small class="fonwR15">16 December, 2025</small>
-                        <span class="fonwR22">Floating Island, 3F Vista Hall</span>
-                        <a href="javascript:void(0)" class="btnDefault fonwR18">Online Registration</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="quickMenuContainer">
-                <div>
-                    <div class="leftBox">
-                        <div>
-                            <p class="fonwR16">
-                                <b class="fonwB20">Ready to resolve your dispute?</b> Our team is here to guide you through every step of the dispute resolution process with professional expertise and efficient support.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="rightBox">
-                        <div class="titleWrap">
-                            <mark class="fonwB14">Quick Services</mark>
-                            <h2 class="fonwS40">
-                                <p>Start Your</p>
-                                <p class="fonwR40">Resolution Journey</p>
-                            </h2>
-                        </div>
-                        <ol class="quickMenuList">
-                            <li>
-                                <span></span>
-                                <div>
-                                    <h3 class="fonwS20">Practice Notes</h3>
-                                    <p class="fonwR15">Practical guidance and reference materials for arbitration users</p>
-                                </div>
-                                <button type="button" class="circleMore gray">learn more</button>
-                            </li>
-                            <li>
-                                <span></span>
-                                <div>
-                                    <h3 class="fonwS20">Model Clause</h3>
-                                    <p class="fonwR15">Model clauses to support clear and enforceable arbitration agreements</p>
-                                </div>
-                                <button type="button" class="circleMore gray">learn more</button>
-                            </li>
-                            <li>
-                                <span></span>
-                                <div>
-                                    <h3 class="fonwS20">Cost Calculator</h3>
-                                    <p class="fonwR15">Estimate arbitration fees and administrative costs instantly.</p>
-                                </div>
-                                <button type="button" class="circleMore gray">learn more</button>
-                            </li>
+                        <h4>About Us</h4>
+                        <ol>
+                            <li><a href="about/kcabInternational.html" target="_blank">KCAB International</a></li>
                         </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="mediationContainer">
-                <div>
-                    <p class="fonwR38">
-                        <b class="fonwS">Mediation</b>
-                        with KCAB International
-                    </p>
-                    <span class="fopwL">Manage Risk. Resolve Early.</span>
-                    <a href="javascript:void(0)" class="btnDefault fonwR15">Read More</a>
-                </div>
-                <img src="images/kcab_bg_contact_m.png" alt="contact image">
+                    </li>
+                    <li>
+                        <h4>News & Events</h4>
+                        <ol>
+                            <li><a href="news&events/pressRelease.html" target="_blank">Press Release</a></li>
+                        </ol>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
