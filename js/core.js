@@ -17,6 +17,7 @@ $(document).ready(function(){
     customSelect();
     customSelectSub();
     tabButtonFunction();
+    accordionFunction();
 });
 
 function activeAddClass(){
@@ -95,5 +96,15 @@ function tabButtonFunction(){
         $('.tabContent').removeClass('active');
         $('#'+tabID).addClass('active');
 
+    });
+}
+
+function accordionFunction(){
+    $('.listType4 .faq_answer_box').hide();
+    $('.listType4 h4').click(function() {
+        $('.faq_answer_box').stop().slideUp(300);
+        $(this).parents().siblings().removeClass('active');
+        $(this).next('.faq_answer_box').stop().slideToggle(300);
+        $(this).parents().toggleClass('active');
     });
 }
