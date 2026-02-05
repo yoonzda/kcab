@@ -1,0 +1,25 @@
+@media screen and (max-width: 1279px){
+    .aside{display: none;}
+}
+@media screen and (min-width: 1280px){
+    .subContent aside{
+        width: 260px;
+        
+        position: sticky;
+        top: 120px;
+    }
+    .subContent aside h3{color: #222; margin-bottom: 24px;}
+    .subContent aside ol{border-top: 1px solid #EBEBEB;}
+    .subContent aside ol li{border-bottom: 1px solid #EBEBEB; display: block; padding: 24px 16px; font-size: 15px; font-weight: 400; line-height: 140%; position: relative;}
+    .subContent aside ol li.active,
+    .subContent aside ol li:hover{border-bottom: 1px solid var(--primary); font-weight: 600; color: var(--primary);}
+    .subContent aside ol li::before{content: ''; position: absolute; width: 4px; height: 4px; border-radius: 50%; background-color: var(--primary); top: 50%; transform: translate(0, -50%); clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
+    .subContent aside ol li::after{content: ''; position: absolute; width: 16px; height: 16px; right: 16px; top: 50%; transform: translate(0, -50%); background-image: url('../images/kcab_icon_more_blue.svg'); background-repeat: no-repeat; background-position: -16px center; transition: background ease-out .2s;}
+    .subContent aside ol li a{text-decoration: none; color: inherit; padding-right: 20px; display: inline-block; box-sizing: border-box; transition: padding ease-out .2s;}
+    .subContent aside ol li.active a,
+    .subContent aside ol li:hover a{padding-left: 12px;}
+    .subContent aside ol li.active::before,
+    .subContent aside ol li:hover::before{clip-path: circle(50% at 50% 50%);}
+    .subContent aside ol li.active::after,
+    .subContent aside ol li:hover::after{background-position: center;}
+}
