@@ -107,3 +107,30 @@ function animateWaveText(waveEl) {
 //     }
 //   });
 // }
+
+var swiper2 = new Swiper(".eventTrainingSlide", {
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    speed: 800,
+    pagination:{
+        el: ".swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + '/' +
+                    '<span class="' + totalClass + '"></span>';
+        },
+        formatFractionCurrent: function (number) {
+            return number < 10 ? '0' + number : number;
+        },
+        formatFractionTotal: function (number) {
+            return number < 10 ? '0' + number : number;
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
