@@ -1606,4 +1606,10 @@
     .listType8 h5{
         scroll-margin-top: 100px;
     }
+
+    .sub03ConText{list-style: none;}
+    .sub03ConText li:not(:last-of-type){margin-bottom: 16px;}
+    .sub03ConText li p{font-size: 18px; font-weight: 400; color: #434343; line-height: 150%;}
+    .sub03ConText li a{font-weight: 600; color: #26A5FF; text-decoration: underline;}
+    .sub03 img{width: 100%; margin-bottom: 32px;}
 }
