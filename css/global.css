@@ -1105,6 +1105,8 @@ mark{font-style: normal; background-color: transparent;}
     }
 }
 
+.subVisual.sub03{background-image: url('../images/kcab_bg_sub03_left.png');}
+.subVisual.sub03::after{background-image: url('../images/kcab_bg_sub03_right.png');}
 .subVisual.sub04{background-image: url('../images/kcab_bg_sub04_left.png');}
 .subVisual.sub04::after{background-image: url('../images/kcab_bg_sub04_right.png');}
 .subVisual.sub05{background-image: url('../images/kcab_bg_sub05_left.png');}

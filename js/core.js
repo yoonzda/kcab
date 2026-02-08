@@ -107,4 +107,12 @@ function accordionFunction(){
         $(this).next('.faq_answer_box').stop().slideToggle(300);
         $(this).parents().toggleClass('active');
     });
+
+    $('.listType7 .accordionContent').hide();
+    $('.listType7 .accordionBox').click(function() {
+        $('.accordionContent').stop().slideUp(300);
+        $(this).parents().siblings().removeClass('active');
+        $(this).next('.accordionContent').stop().slideToggle(300);
+        $(this).parents().toggleClass('active');
+    });
 }
