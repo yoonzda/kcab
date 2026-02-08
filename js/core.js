@@ -18,6 +18,7 @@ $(document).ready(function(){
     customSelectSub();
     tabButtonFunction();
     accordionFunction();
+    mediatorPopFunction();
 });
 
 function activeAddClass(){
@@ -114,5 +115,15 @@ function accordionFunction(){
         $(this).parents().siblings().removeClass('active');
         $(this).next('.accordionContent').stop().slideToggle(300);
         $(this).parents().toggleClass('active');
+    });
+}
+
+function mediatorPopFunction(){
+    $('.mediatorTable button').click(function(){
+        $('.mediator.pop').addClass('active');
+    });
+
+    $('.mediator.pop button').click(function(){
+        $('.mediator.pop').removeClass('active');
     });
 }

@@ -1612,4 +1612,49 @@
     .sub03ConText li p{font-size: 18px; font-weight: 400; color: #434343; line-height: 150%;}
     .sub03ConText li a{font-weight: 600; color: #26A5FF; text-decoration: underline;}
     .sub03 img{width: 100%; margin-bottom: 32px;}
+
+    .sub03 .filterBox{background-color: #F6F6F6; border: 1px solid #E5E5E5; border-radius: 3px; display: flex; padding: 24px 30px; align-items: center; margin-bottom: 60px;}
+    .sub03 .filterBox ul{list-style: none; display: flex; flex: 1; gap: 12px 48px; flex-wrap: wrap;}
+    .sub03 .filterBox button{background-color: #294DC7; width: 46px; height: 46px; border-radius: 6px; text-indent: -9999px; background-image: url('../images/kcab_icon_search.svg'); background-repeat: no-repeat; background-position: center; background-size: 16px;}
+    .sub03 .filterBox label{font-size: 15px; font-weight: 500; line-height: 140%; color: #222; margin-right: 16px;}
+    .sub03 .filterBox ul li input{width: 160px; height: 46px; border-radius: 6px; border: 1px solid #DDD; padding-inline: 16px; box-sizing: border-box; font-size: 14px; font-weight: 400; line-height: 140%; color: #434343;}
+    .sub03 .filterBox ul li select{width: 160px; height: 46px; border-radius: 6px; border: 1px solid #DDD; padding-inline: 16px; font-size: 14px; font-weight: 400; line-height: 140%; color: #434343;}
+    .sub03 .filterBox ul li input::placeholder{color: #999;}
+    .sub03 .filterBox ul li select{background-image: url('../images/kcab_select_arrow_666.svg'); background-position: calc(100% - 16px) center; background-repeat: no-repeat;}
+
+    .sub03 + .tableWrap{margin-bottom: 80px;}
+    .mediatorTable{border-top: 2px solid #003E7F; width: 100%;}
+    .mediatorTable tr{border-bottom: 1px solid #F1F1F1; text-align: center;}
+    .mediatorTable th:not(:last-of-type){border-right: 1px solid #f1f1f1;}
+    .mediatorTable td:not(:last-of-type){border-right: 1px solid #f1f1f1;}
+    .mediatorTable th{font-size: 16px; font-weight: 400; line-height: 130%; color: #767676; background-color: #FAFAFA; padding-block: 14px;}
+    .mediatorTable td{font-size: 15px; font-weight: 400; line-height: 130%; color: #434343; padding-block: 14px; padding-inline: 12px; vertical-align: middle;}
+    .mediatorTable td button:hover{color: #294DC7; text-decoration: underline;}
+
+    .mediator.pop:not(.active){display: none;}
+    .mediator.pop{
+        position: fixed;
+        left: 0; top: 0; z-index: 100;
+        width: 100%; height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .popWrap{
+        position: absolute;
+        left: 50%; top: 50%; transform: translate(-50%, -50%);
+        display: flex; gap: 10px;
+    }
+    .popWrap button{width: 50px; height: 50px; background-color: #121212; order: 2; text-indent: -9999px; background-image: url('../images/kcab_icon_close_white.svg'); background-repeat: no-repeat; background-position: center;}
+    .popWrap>div{background-color: #FFF; padding: 40px; width: 720px; box-sizing: border-box;}
+    .popWrap .topBox{display: flex; gap: 20px; margin-bottom: 24px;}
+    .popWrap .topBox div{border-top: 1px solid #121212; border-bottom: 1px solid #DDD; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex: 1; padding-inline: 24px;}
+    .popWrap .topBox div b{font-size: 28px; font-weight: 600; color: #222; display: block; margin-bottom: 8px;}
+    .popWrap .topBox div small{font-size: 16px; font-weight: 400; color: #626D84; line-height: 140%; display: block; margin-bottom: 28px;}
+    .popWrap .bottomBox{}
+    .popWrap .bottomBox table{border-top: 1px solid #DDD; width: 100%;}
+    .popWrap .bottomBox table tr{border-bottom: 1px solid #DDD;}
+    .popWrap .bottomBox table th{width: 180px; background-color: #FAFAFA; border-right: 1px solid #DDD; font-size: 16px; font-weight: 500; color: #222; vertical-align: middle;}
+    .popWrap .bottomBox table td{padding: 24px 32px; font-size: 16px; font-weight: 400; line-height: 140%; color: #434343;}
+    .popWrap .bottomBox table td ul{list-style: none;}
+    .popWrap .bottomBox table td ul li{position: relative; padding-left: 12px;}
+    .popWrap .bottomBox table td ul li::before{content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #294DC7; position: absolute; left: 0; top: 8px;}
 }
