@@ -1122,3 +1122,6 @@ mark{font-style: normal; background-color: transparent;}
 .fileIcon{width: 20px;}
 .eventImageBox{position: relative; width: 420px;}
 .eventImageBox .markerImage{position: absolute; right: 0; top: 0; width: 112px;}
+
+.registButton{position: relative; z-index: 1;}
+.festivalBanner img{width: 100%;}

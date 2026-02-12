@@ -115,3 +115,5 @@
 .ellipsisText{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
 a.colorBlue{color: #26A5FF; text-decoration: underline;}
+
+.mb16{margin-bottom: 16px;}

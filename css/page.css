@@ -1799,9 +1799,12 @@
     .sub02Content .visualImage{width: 100%; margin-bottom: 32px;}
 
     .subTabButtonBox{display: flex; gap: 10px; list-style: none; margin-bottom: 50px;}
-    .subTabButtonBox li{flex: 1;}
+    .subTabButtonBox:not(.smallButton) li{flex: 1;}
     .subTabButtonBox li button{background-color: #F6F6F6; color: #666666; border: 1px solid #E5E5E5; width: 100%; height: 100%; min-height: 70px; font-size: 15px; font-weight: 400; line-height: 130%; padding-block: 12px; padding-inline: 12px;}
     .subTabButtonBox li button.active{background-color: #121212; color: #FFF;}
+
+    .subTabButtonBox.smallButton li{width: 240px;}
+    .subTabButtonBox.smallButton li button{padding-block: 12px; min-height: 0;}
     
     .subTabContent h4{font-size: 24px; font-weight: 500; line-height: 140%; color: #222; padding-left: 12px; position: relative; margin-bottom: 24px; border-bottom: 1px solid #121212; padding-bottom: 20px;}
     .subTabContent h4::before{content: ''; display: block; position: absolute; left: 0; top: 8px; width: 3px; height: 18px; background-color: #294DC7;}
@@ -2174,4 +2177,44 @@
     .eventTraining .contentBox ul>li:not(:last-of-type){margin-bottom: 12px;}
     .eventTraining .contentBox ul>li::before{content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #2A2E52; position: absolute; left: 0; top: 10px;}
     .eventTraining .contentBox h4{font-size: 18px; font-weight: 500; line-height: 150%; color: #222; margin-bottom: 12px;}
+
+    .dDayBox{padding-block: 72px; display: flex; flex-direction: column; align-items: center; gap: 28px;}
+    .dDayBox p{font-size: 40px; font-weight: 500; color: #052E5A;}
+    .dDayBox span{font-size: 30px; font-weight: 600; line-height: 140%; color: #2A2E52; padding: 16px 54px; background: linear-gradient(135deg, #BCEEF1 60%, #A0D3DE); border-radius: 38px;}
+
+    .feeWrap{display: flex; margin-bottom: 24px;}
+    .feeWrap>div{padding: 40px; box-sizing: border-box;}
+    .feeWrap .leftBox{width: 400px; border: 1px solid #DDD; background-color: #FFF; display: flex; flex-direction: column; gap: 40px;}
+    .feeWrap .rightBox{flex: 1; background-color: #FAFAFA;}
+    .feeWrap>div h5{font-size: 20px; font-weight: 500; color: #2A3E82; line-height: 140%;}
+    .feeWrap>div label{font-size: 16px; font-weight: 400; line-height: 150%; color: #434343; display: block;}
+
+    .feeWrap .leftBox .buttonBox{margin-top: auto;}
+    .feeWrap .leftBox select {
+        width: 100%;
+        height: 54px;
+        border: 1px solid #DDD;
+        border-radius: 3px;
+        padding-inline: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: #666;
+        background-image: url(../images/kcab_select_arrow_666.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 24px) center;
+    }
+    .feeWrap .leftBox .buttonBox{display: flex; flex-direction: column;}
+    .feeWrap .leftBox .buttonBox button{height: 50px;}
+    .feeWrap .rightBox h5{padding-bottom: 24px;}
+    .feeWrap .leftBox .feeInput input{width: 100%;}
+    .feeWrap .feeInput input{width: 70%; border: 1px solid #EBEBEB; height: 44px; padding-inline: 24px 70px; box-sizing: border-box;}
+    .feeWrap .rightBox>*:not(:last-child){border-bottom: 1px solid #EBEBEB;}
+    .feeWrap .rightBox ul{list-style: none; padding-block: 16px;}
+    .feeWrap .rightBox ul li:not(:last-of-type){margin-bottom: 16px;}
+    .feeWrap .rightBox div>.feeInput{padding-block: 16px;}
+    .feeWrap .feeInput{display: flex; justify-content: space-between; align-items: center; position: relative;}
+    .feeWrap .feeInput span{position: absolute; right: 20px; top: 28px; font-size: 14px; font-weight: 400; line-height: 150%; color: #2A3E82;}
+    .feeWrap .leftBox .feeInput span{top: 12px;}
+    .feeWrap ul .feeInput span{top: 12px;}
 }
