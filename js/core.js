@@ -109,6 +109,17 @@ function tabButtonFunction(){
         $('#'+tabID).addClass('active');
 
     });
+    
+    $('.rulesTabButton button').click(function(){
+        var tabID = $(this).attr('data-tabName');
+
+        $('.rulesTabButton li').removeClass('active');
+        $(this).parent().addClass('active');
+
+        $('.rulesTabContent').removeClass('active');
+        $('#'+tabID).addClass('active');
+
+    });
 }
 
 function accordionFunction(){

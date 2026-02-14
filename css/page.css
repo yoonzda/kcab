@@ -663,7 +663,7 @@
     .tabButtonBox li{flex: 1;}
     .tabButtonBox li button{
         width: 100%;
-        font-size: 15px; height: 60px; padding-inline: 12px;
+        font-size: 15px; height: 100%; padding-inline: 12px; padding-block: 12px;
     }
     .tabButtonBox li button:not(.active){font-weight: 400; color: #666; background-color: #F6F6F6;}
     .tabButtonBox li button.active{font-weight: 700; color: #FFF; background-color: #294DC7;}
@@ -2260,6 +2260,17 @@
     .rulesHistory>li.active{background-color: #121212; color: #FFF;}
     .rulesHistory>li:not(.active){background-color: #F6F6F6; color: #666; border: 1px solid #E5E5E5;}
     .rulesHistory>li a{display: block;}
+    .rulesHistory>li button{font-size: 15px; font-weight: 400; line-height: 140%; color: inherit; width: 100%;}
     .rulesHistory.downloadBox{flex-direction: column; align-items: flex-start; gap: 16px;}
     .rulesHistory.downloadBox ol{flex-wrap: wrap;}
+
+    .rulesTabContent>p{font-size: 18px; font-weight: 400; line-height: 150%; color: #434343;}
+    .rulesTabContent>p a{font-weight: 600;}
+    .rulesTabContent h3{margin-top: 100px;}
+
+    .rulesPDFBox{background-color: #F9F9F9; border-bottom: 2px solid #DDD; padding: 20px 32px;}
+    .rulesPDFBox p{font-size: 15px; font-weight: 400; color: #2A3E82; margin-bottom: 16px;}
+    .rulesPDFBox a{font-size: 16px; font-weight: 400; line-height: 150%; color: #434343; display: block; text-decoration: underline;}
+    .rulesPDFBox a:not(:last-of-type){margin-bottom: 8px;}
+    .rulesPDFBox a:hover{font-weight: 600; color: #26A5FF;}
 }

@@ -1118,6 +1118,8 @@ mark{font-style: normal; background-color: transparent;}
 .tabContent.active{display: block;}
 .subTabContent:not(.active){display: none;}
 .subTabContent.active{display: block;}
+.rulesTabContent:not(.active){display: none;}
+.rulesTabContent.active{display: block;}
 
 .fileIcon{width: 20px;}
 .eventImageBox{position: relative; width: 420px;}
