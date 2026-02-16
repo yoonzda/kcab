@@ -1,6 +1,9 @@
 /* FONT */
 [class*="fon"]{font-family: 'Onest';}
 [class*="fop"]{font-family: 'Open Sans'; font-style: italic;}
+.listType9,
+.sub02Content{font-family: 'Onest';}
+
 
 [class*="wEL"]{font-weight: 200;}
 [class*="wL"]{font-weight: 300;}
