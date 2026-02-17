@@ -18,6 +18,7 @@ $(document).ready(function(){
     customSelectSub();
     tabButtonFunction();
     accordionFunction();
+    aboutPopFunction();
     mediatorPopFunction();
 });
 
@@ -153,6 +154,16 @@ function accordionFunction(){
         $(this).parents().siblings().removeClass('active');
         $(this).next('.listType14').stop().slideToggle(300);
         $(this).parents().toggleClass('active');
+    });
+}
+
+function aboutPopFunction(){
+    $('.profileList button').click(function(){
+        $('.about.pop').addClass('active');
+    });
+
+    $('.about.pop button').click(function(){
+        $('.about.pop').removeClass('active');
     });
 }
 
