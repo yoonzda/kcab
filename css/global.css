@@ -1124,7 +1124,7 @@ mark{font-style: normal; background-color: transparent;}
 .rulesTabContent.active{display: block;}
 
 .fileIcon{width: 20px;}
-.eventImageBox{position: relative; width: 420px;}
+.eventImageBox{position: relative; max-width: 420px;}
 .eventImageBox .markerImage{position: absolute; right: 0; top: 0; width: 112px;}
 
 .registButton{position: relative; z-index: 1;}
