@@ -1129,3 +1129,9 @@ mark{font-style: normal; background-color: transparent;}
 
 .registButton{position: relative; z-index: 1;}
 .festivalBanner img{width: 100%;}
+
+.dashBul{list-style: none; margin-top: 16px;}
+.dashBul>li{position: relative; padding-left: 16px;}
+.dashBul>li:not(:last-of-type){margin-bottom: 8px;}
+.dashBul>li::before{content: '- '; position: absolute; left: 0; top: 4px;}
+.detailPage.contentBox ul.textBox li .dashBul>li p{margin: 0;}
