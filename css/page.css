@@ -1681,6 +1681,13 @@
     .contactList>li span{width: 80px; font-size: 16px; font-weight: 500; color: #222; line-height: 140%;}
     .contactList>li p{font-size: 14px; font-weight: 400; color: #666; line-height: 140%; flex: 1;}
     .contactList>li a{font-size: 14px; font-weight: 600; color: #294DC7; line-height: 140%; text-decoration: underline; flex: 1;}
+
+    /* 0222 keyword 영역 추가 */
+    .keywordBox{background-color: #FAFAFA; padding: 20px; margin-top: 16px;}
+    .keywordText{font-size: 13px; font-weight: 400; color: #626D84; line-height: 140%;}
+    .keywordText span{font-weight: 500; color: #F30387;}
+
+    .relatedList{margin-top: 60px;}
 }
 
 /* pc */
@@ -3155,6 +3162,13 @@
     .contactList>li span{width: 80px; font-size: 18px; font-weight: 500; color: #222; line-height: 140%;}
     .contactList>li p{font-size: 16px; font-weight: 400; color: #666; line-height: 140%;}
     .contactList>li a{font-size: 16px; font-weight: 600; color: #294DC7; line-height: 140%; text-decoration: underline;}
+
+    /* 0222 keyword 영역 추가 */
+    .keywordBox{background-color: #FAFAFA; padding: 20px 28px; margin-top: 24px;}
+    .keywordText{font-size: 14px; font-weight: 400; color: #626D84; line-height: 140%;}
+    .keywordText span{font-weight: 500; color: #F30387;}
+
+    .relatedList{margin-top: 100px;}
 }
 
 .timeline{
