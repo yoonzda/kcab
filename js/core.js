@@ -14,13 +14,14 @@ $(document).ready(function(){
     $('.dep02List li').hover(activeToggleClass);
 
     // menuDropPanel();
-    // siteMapFunction();
+    siteMapFunction();
     customSelect();
     customSelectSub();
     tabButtonFunction();
     accordionFunction();
     aboutPopFunction();
     mediatorPopFunction();
+    signPopFunction();
 });
 
 function activeAddClass(){
@@ -155,6 +156,20 @@ function accordionFunction(){
         $(this).parents().siblings().removeClass('active');
         $(this).next('.listType14').stop().slideToggle(300);
         $(this).parents().toggleClass('active');
+    });
+}
+function signPopFunction(){
+    $('.mailBox').click(function(){
+        console.log(1);
+        $('.sign.pop').addClass('active');
+    });
+
+    $('.sign.pop').click(function(){
+        $(this).removeClass('active');
+    });
+
+    $('.sign.pop .popWrap').click(function(e){
+        e.stopPropagation();
     });
 }
 
