@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('button.btnMenu').click(activeToggleClass);
     $('button.btnMenu').click(function(){
+        $('.menuAll').toggleClass('active');
         $('.menuMobilePanel').toggleClass('active');
         $('.menuDep01List li ul').hide();
         $('.menuDep01List h3').parent().siblings().removeClass('active');

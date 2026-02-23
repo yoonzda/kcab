@@ -1,0 +1,599 @@
+button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+input:focus{outline: none;}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-results-button {
+    display: none;
+}
+
+mark{font-style: normal; background-color: transparent;}
+
+@media screen and (min-width: 1280px) {
+    .mui {
+        display: none;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        height: 100px;
+    }
+    header::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100px;
+        background-color: #FFF;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    /* 260224 header 수정 */
+    .menuAll:not(.active){display: none;}
+    .menuAll{background-color: #FFF; padding-block: 60px; padding-inline: 200px; border-top: 1px solid rgba(0, 0, 0, 0.1);}
+    .menuAll [class*="menu_dep"]{list-style: none;}
+    .menuAll .menu_dep1{display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(2, 1fr); gap: 0 4%;}
+    .menuAll .menu_dep1>li:nth-of-type(1){grid-column: 1; grid-row: 1/3;}
+    .menuAll .menu_dep1>li:nth-of-type(2){grid-column: 2; grid-row: 1/3;}
+    .menuAll .menu_dep1>li:nth-of-type(3){grid-column: 3; grid-row: 1/3;}
+    .menuAll .menu_dep1>li:nth-of-type(4){grid-column: 4; grid-row: 1/3;}
+    .menuAll .menu_dep1>li:nth-of-type(5){grid-column: 5; grid-row: 1;}
+    .menuAll .menu_dep1>li:nth-of-type(6){grid-column: 5; grid-row: 2;}
+    .menuAll .menu_dep1 h3{font-size: 28px; font-weight: 700; line-height: 140%; color: #231815; padding-bottom: 24px; margin-bottom: 20px; position: relative;}
+    .menuAll .menu_dep1 h3::after{content: ''; display: block; width: 100%; height: 1px; background: linear-gradient(90deg,#64C8FF, #294DC7); position: absolute; left: 0; bottom: 0;}
+    .menuAll .menu_dep2>li:not(:last-of-type){margin-bottom: 16px;}
+    .menuAll .menu_dep2>li>a{font-size: 17px; font-weight: 500; color: #231815; line-height: 120%;}
+    .menuAll .menu_dep2>li:hover>a{color: #294DC7; text-decoration: underline;}
+    .menuAll .menu_dep3{margin-top: 8px; padding-left: 12px;}
+    .menuAll .menu_dep3>li:not(:last-of-type){margin-bottom: 8px;}
+    .menuAll .menu_dep3>li>a{font-size: 16px; font-weight: 200; color: #626D84; line-height: 120%;}
+    .menuAll .menu_dep3>li:hover>a{color: #294DC7; text-decoration: underline; font-weight: 400;}
+
+    .menuDefault .drop_dep1>li{position: relative; padding-block: 48px;}
+    .menuDefault .drop_dep1>li:hover{color: #294DC7;}
+    .menuDefault .drop_dep1>li:hover .drop_dep2{display: block;}
+    .menuDefault .drop_dep2>li:hover .drop_dep3{display: block;}
+    .menuDefault .drop_dep2{display: none; position: absolute; background-color: #FFF; left: 50%; top: 0; transform: translate(-50%, 106px); width: 330px; padding-block: 24px; box-shadow: 4px 16px 20px rgba(0, 0, 0, 0.15);}
+    .menuDefault .drop_dep3{display: none; position: absolute; background-color: #FFF; right: 0; top: 0; transform: translate(100%, -24px); padding: 24px;}
+    .menuDefault .drop_dep2>li{padding-inline: 28px;}
+    .menuDefault .drop_dep2>li:not(:last-of-type){margin-bottom: 24px;}
+    .menuDefault .drop_dep2>li>a{font-size: 15px; font-weight: 400; line-height: 140%; color: #231815;}
+    .menuDefault .drop_dep3>li:not(:last-of-type){margin-bottom: 14px;}
+    .menuDefault .drop_dep3>li>a{font-size: 15px; font-weight: 400; line-height: 140%; color: #231815;}
+    
+    .menuDefault .drop_dep2>li>a{position: relative; transition: padding ease-out .2s;}
+    .menuDefault .drop_dep2>li:hover>a{color: #294DC7; padding-left: 14px; text-decoration: underline;}
+    .menuDefault .drop_dep2>li>a::before{content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #294DC7; position: absolute; left: 0; top: 8px; clip-path: circle(0% at 50% 50%); transition: clip-path ease-out .2s;}
+    .menuDefault .drop_dep2>li:hover>a::before{clip-path: circle(50% at 50% 50%);}
+    .menuDefault .drop_dep2>li:has(.drop_dep3){background-image: url('../images/kcab_menu_more_black.svg'); background-repeat: no-repeat; background-position: calc(100% - 24px) center;}
+    .menuDefault .drop_dep2>li:has(.drop_dep3):hover{background-image: url('../images/kcab_menu_more_blue.svg');}
+
+    .menuDefault .drop_dep3>li:hover>a{color: #294DC7;}
+
+
+
+    .menuMobilePanel{display: none;}
+    
+    .circleMore.purple {
+        background-color: rgba(46, 21, 177, 0.1);
+    }
+    .circleMore.purple::after {
+        background-image: url('../images/kcab_icon_more.svg');
+    }
+    .circleMore.gray {
+        background-color: #F5F4F0;
+    }
+    .circleMore.gray::after {
+        background-image: url('../images/kcab_icon_more_black.svg');
+    }
+    .circleMore {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: relative;
+        text-indent: -9999px;
+        margin-left: auto;
+    }
+    .circleMore::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        transition: transform ease-out .6s;
+    }
+
+    .menuDropPanel:not(.active) {
+        transform: translate(0, -100%);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0);
+    }
+    .menuDropPanel.active {
+        transform: translate(0, 0);
+    }
+    .menuDropPanel {
+        background-color: #FFF;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: -2;
+    }
+    .menuDropPanel ol {
+        display: flex;
+    }
+    .menuDropPanel ol>li {
+        list-style: none;
+        flex: 1;
+        padding-block: 30px;
+        padding-inline: 24px;
+        transition: background-color ease-out .4s;
+    }
+    .menuDropPanel ol>li:not(:last-of-type) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .menuDropPanel ol>li.active,
+    .menuDropPanel ol>li:hover {
+        background-color: rgba(46, 21, 177, 0.05);
+    }
+    .menuDropPanel ol li ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menuDropPanel ol li ul li {
+        text-align: center;
+        list-style: none;
+        line-height: 140%;
+        color: rgba(98, 109, 132, 1);
+        transition: color ease-out .2s;
+        padding-bottom: 24px;
+    }
+    .menuDropPanel ol li ul:has(li.active) li:not(.active) {
+        color: rgba(98, 109, 132, 0.4);
+    }
+    .menuDropPanel ol li ul li.active {
+        text-decoration: underline;
+        color: #2E15B1;
+    }
+    .menuDropPanel ol li ul li:not(.active) a span {
+        clip-path: circle(0% at 50% 50%);
+    }
+    .menuDropPanel ol li ul li a span {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #2E15B1;
+        position: absolute;
+        left: -12px;
+        top: 8px;
+        clip-path: circle(50% at 50% 50%);
+        transition: clip-path ease-out .2s;
+    }
+    .menuDropPanel ol li ul li a {
+        position: relative;
+    }
+    header:has(.menuMobilePanel.active) .menuDefault {
+        background-color: transparent;
+        justify-content: flex-end;
+        height: 100px;
+    }
+    header:has(.menuMobilePanel.active) .menuDefault h1 {
+        display: none;
+    }
+    header:has(.menuMobilePanel.active) .menuDefault nav {
+        display: none;
+    }
+    .menuDefault {
+        position: relative;
+        z-index: 1;
+        background-color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 30px;
+        padding-inline: 4%;
+        gap: 16px;
+        box-sizing: border-box;
+        height: 100px;
+
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .menuDefault h1 {
+        width: 8%;
+        max-width: 117px;
+    }
+    .menuDefault h1 a {
+        display: block;
+    }
+    .menuDefault h1 a img {
+        display: block;
+        width: 100%;
+    }
+    .menuDefault div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .menuDefault>div {
+        gap: 1vw;
+        width: 92%;
+    }
+    .menuDefault>div nav {
+        flex: 1;
+        font-size: min(1vw, 16px);
+    }
+    .menuDefault>div div.headerBtnBox{
+        min-width: 300px;
+        justify-content: flex-end;
+        gap: min(2vw, 16px);
+    }
+    .menuDefault>div nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: max(1.6vw, 16px);
+        /* width: 840px; */
+    }
+    .menuDefault>div nav ul li {
+        position: relative;
+        color: rgba(35, 24, 21, 1);
+        transition: color ease-out .2s;
+    }
+    .menuDefault>div nav ul:has(li.active) li:not(.active) {
+        color: rgba(35, 24, 21, 0.4);
+    }
+    .menuDefault>div nav ul li.active {
+        color: rgba(35, 24, 21, 1);
+    }
+    .menuDefault>div nav ul li:after {
+        content: '';
+        display: block;
+        width: calc(100% + 12px);
+        height: 11px;
+        background-color: rgba(46, 21, 177, 0.2);
+        position: absolute;
+        left: -6px;
+        bottom: -2px;
+        z-index: -1;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: transform ease-out .4s;
+    }
+    .menuDefault>div nav ul li.active:after {
+        transform: scaleX(1);
+    }
+    .menuDefault>div nav ul li a {
+        display: block;
+    }
+    .btnSearch {
+        width: 300px;
+        height: 34px;
+        border-radius: 17px;
+        padding-block: 6px;
+        padding-inline: 24px 44px;
+        background-image: url('../images/kcab_icon_search.svg');
+        background-position: calc(100% - 22px) center;
+        background-repeat: no-repeat;
+    }
+    .langWrap {
+        position: relative;
+    }
+    .btnLang {
+        width: 24px;
+        height: 24px;
+        text-indent: -9999px;
+        background-image: url('../images/kcab_icon_lang.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .langWrap:not(.active) .langLayer {
+        display: none;
+    }
+    .langLayer {
+        position: absolute;
+        left: -24px;
+        top: 0;
+        padding-top: 32px;
+    }
+    .langLayer div {
+        background-color: #FFF;
+        border: 1px solid #EBEBEB;
+        border-radius: 12px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.04);
+        flex-direction: column;
+        padding-block: 12px;
+        padding-inline: 8px;
+    }
+    .langLayer a {
+        display: block;
+        width: 60px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: 500;
+        color: #626D84;
+    }
+    .langLayer a:hover {
+        font-weight: 600;
+        text-decoration: underline;
+        color: #222;
+    }
+    .btnMenu {
+        width: 24px;
+        height: 24px;
+        padding: 3px 2px;
+    }
+    .btnMenu span {
+        display: block;
+        height: 2px;
+        border-radius: 1px;
+        transition-property: width, opacity, transform;
+        transition-duration: .3s, .3s, .46s;
+        transition-timing-function: ease-out;
+        transform-origin: right center;
+    }
+    .btnMenu span:nth-of-type(1) {
+        width: 20px;
+        background-color: var(--btn-color-black);
+    }
+    .btnMenu span:nth-of-type(2) {
+        width: 12px;
+        background-color: var(--btn-color-blue);
+        margin-left: auto;
+    }
+    .btnMenu span:nth-of-type(3) {
+        width: 20px;
+        background-color: var(--btn-color-black);
+    }
+    .btnMenu span:not(:last-of-type) {
+        margin-bottom: 6px;
+    }
+    .btnMenu:hover span:nth-of-type(2) {
+        width: 20px;
+    }
+    .btnMenu.active span:nth-of-type(1) {
+        transform: translateX(-3px) translateY(1px) rotate(-45deg);
+    }
+    .btnMenu.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    .btnMenu.active span:nth-of-type(3) {
+        transform: translateX(-3px) translateY(-1px) rotate(45deg);
+    }
+    footer {
+        background-color: #131720;
+    }
+    footer .topBox{
+        padding-block: 80px;
+        padding-inline: 4%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .topBox .leftBox {
+        padding-right: 100px;
+    }
+    footer .topBox .leftBox h2 {
+        margin-bottom: 30px;
+    }
+    footer .topBox .leftBox p {
+        width: 230px;
+        line-height: 130%;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 24px;
+    }
+    footer .topBox .leftBox .snsList {
+        margin-bottom: 100px;
+    }
+    footer .topBox .leftBox .snsList li {
+        display: inline-block;
+        height: 40px;
+    }
+    footer .topBox .leftBox .snsList li:nth-of-type(1) {
+        background-image: url('../images/kcab_icon_linkedin.svg');
+        width: 40px;
+    }
+    footer .topBox .leftBox .snsList li:nth-of-type(2) {
+        background-image: url('../images/kcab_icon_youtube.svg');
+        width: 40px;
+        margin-left: 10px;
+    }
+    footer .topBox .leftBox .snsList li a {
+        display: block;
+        text-indent: -9999px;
+        height: inherit;
+    }
+    footer .topBox .leftBox .customSelect {
+        width: 218px;
+        position: relative;
+    }
+    footer .topBox .leftBox .customSelect button {
+        background-color: #FFF;
+        width: 100%;
+        height: 46px;
+        border-radius: 23px;
+        color: #222;
+        text-align: left;
+        padding-inline: 26px;
+        position: relative;
+    }
+    footer .topBox .leftBox .customSelect button::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/kcab_select_black.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        transition: transform ease-out .4s;
+    }
+    footer .topBox .leftBox .customSelect button.active::after {
+        transform: rotate(-180deg);
+    }
+    footer .topBox .leftBox .customSelect .linkList:not(.active) {
+        display: none;
+    }
+    footer .topBox .leftBox .customSelect .linkList {
+        background-color: #FFF;
+        color: #222;
+        padding: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(0, calc(-100% - 12px));
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 23px;
+    }
+    footer .topBox .leftBox .customSelect .linkList li {
+        display: block;
+    }
+    footer .topBox .leftBox .customSelect .linkList li:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+    footer .topBox .rightBox{
+        max-width: 1200px;
+        width: 80%;
+    }
+    footer .topBox .rightBox h3 {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 20px;
+    }
+    footer .topBox .rightBox ul {
+        display: flex;
+        gap: 16px;
+    }
+    footer .topBox .rightBox ul>li:not(:nth-of-type(2)){
+        width: 250px;
+    }
+    footer .topBox .rightBox ul>li:nth-of-type(2){
+        flex: 1;
+    }
+    footer .topBox .rightBox ul>li {
+        height: 240px;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 20px 16px;
+        border-radius: 16px;
+        display: block;
+        cursor: pointer;
+        transition: background-color ease-out .2s;
+        box-sizing: border-box;
+    }
+    footer .topBox .rightBox ul>li:hover {
+        background-color: rgba(255, 255, 255);
+    }
+    footer .topBox .rightBox ul>li:hover h4 span{
+        color: rgba(34, 34, 34, 0.4);
+    }
+    footer .topBox .rightBox ul>li:hover address{
+        color: #222;
+    }
+    footer .topBox .rightBox ul>li:hover ol li a{
+        color: #222;
+    }
+    footer .topBox .rightBox ul>li h4 {
+        color: #519AE8;
+        margin-bottom: 24px;
+
+        background-image: url('../images/kcab_icon_more_tr_gray.svg');
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+    footer .topBox .rightBox ul>li h4 span {
+        color: rgba(255, 255, 255, 0.4);
+        display: block;
+        margin-top: 4px;
+    }
+    footer .topBox .rightBox ul>li address {
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 140%;
+        font-style: normal;
+        margin-bottom: 15px;
+    }
+    footer .topBox .rightBox ul>li ol li {
+        display: block;
+        line-height: 160%;
+    }
+    footer .topBox .rightBox ul>li ol li a {
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    footer .topBox .rightBox ul>li ol li a.infoTell::before {
+        content: 'T ';
+    }
+    footer .topBox .rightBox ul>li ol li a.infoEmail::before {
+        content: 'E ';
+    }
+    footer .topBox .rightBox ul>li.mailBox{
+        background-color: var(--vs400);
+        line-height: 20px;
+        color: #FFF;
+
+        font-size: 17px;
+    }
+    footer .topBox .rightBox ul>li.mailBox img{
+        margin-top: 20px;
+    }
+    footer .bottomBox {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-block: 24px;
+    }
+    footer .bottomBox .innerBox{
+        padding-inline: 4%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    footer .bottomBox .innerBox ul{
+        display: flex;
+    }
+    footer .bottomBox .innerBox ul li {
+        display: block;
+        position: relative;
+        padding-left: 16px;
+    }
+    footer .bottomBox .innerBox ul li::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.6);
+
+        left: 0; top: 5px;
+    }
+    footer .bottomBox .innerBox ul li:not(:last-of-type) {
+        margin-right: 24px;
+    }
+}
