@@ -1688,6 +1688,12 @@
     .keywordText span{font-weight: 500; color: #F30387;}
 
     .relatedList{margin-top: 60px;}
+    
+    /* 0222 event festival 하단 이미지 */
+    .highlightThum{list-style: none; display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;}
+    .highlightThum li{min-width: 320px; flex: 1;}
+    .highlightThum li a{display: block;}
+    .highlightThum li a img{width: 100%;}
 }
 
 /* pc */
@@ -3169,6 +3175,11 @@
     .keywordText span{font-weight: 500; color: #F30387;}
 
     .relatedList{margin-top: 100px;}
+
+    /* 0222 event festival 하단 이미지 */
+    .highlightThum{list-style: none; display: flex; gap: 30px;}
+    .highlightThum li a{display: block;}
+    .highlightThum li a img{width: 100%;}
 }
 
 .timeline{
